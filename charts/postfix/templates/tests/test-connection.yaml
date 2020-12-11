@@ -10,6 +10,6 @@ spec:
   containers:
     - name: wget
       image: busybox
-      command: ['wget']
-      args: ['{{ include "postfix.fullname" . }}:{{ .Values.service.port }}']
+      command: ['nc']
+      args: ['-zv', '{{ include "postfix.fullname" . }}', '25']
   restartPolicy: Never
