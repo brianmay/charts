@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  postfix:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2020-12-11T08:39:41.933059671Z"
+    description: A simple Postfix server
+    digest: 8703cd2212983b49239cc07962fe40847c33a2d4edbca6aefddb30fb046b2bfb
+    name: postfix
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/postfix-0.0.1/postfix-0.0.1.tgz
+    version: 0.0.1
+generated: "2020-12-11T08:39:41.768916949Z"
