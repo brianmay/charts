@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "postfix.fullname" . }}
+  labels:
+    {{- include "postfix.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "postfix.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "postfix.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "postfix.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: MYHOSTNAME
+              value: "{{ .Values.postfix.hostname }}"
+            - name: USERNAME
+              value: "{{ .Values.postfix.username }}"
+            - name: PASSWORD
+              value: "{{ .Values.postfix.password }}"
+            - name: SSL_CERT_PATH
+              value: "/var/run/certs/tls.crt"
+            - name: SSL_KEY_PATH
+              value: "/var/run/certs/tls.key"
+          ports:
+            - name: smtp
+              containerPort: 25
+              protocol: TCP
+            - name: submission
+              containerPort: 587
+              protocol: TCP
+          livenessProbe:
+            tcpSocket:
+              port: 25
+          readinessProbe:
+            tcpSocket:
+              port: 25
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: certs
+              mountPath: /var/run/certs
+              readOnly: true
+      volumes:
+        - name: certs
+          secret:
+            secretName: {{ template "postfix.fullname" . }}-certs
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
