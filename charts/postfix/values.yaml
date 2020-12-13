@@ -38,6 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
+  externalIPs: {}
 
 ingress:
   enabled: false
