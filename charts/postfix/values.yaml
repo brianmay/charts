@@ -8,7 +8,7 @@ image:
   repository: brianmay/postfix
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "sha-e42b479"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
