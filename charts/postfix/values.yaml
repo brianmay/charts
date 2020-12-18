@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   externalIPs: []
+  ipFamilyPolicy: ""
 
 ingress:
   enabled: false
@@ -79,6 +80,8 @@ tolerations: []
 affinity: {}
 
 postfix:
-  hostname: example.org
-  username: username
-  password: password
+  hostname: "example.org"
+  username: "username"
+  password: "password"
+  networks: "10.0.0.0/8,127.0.0.0/8,172.17.0.0/16,192.0.0.0/8"
+  relayhost: "[example.org]"

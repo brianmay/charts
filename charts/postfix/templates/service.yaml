@@ -17,6 +17,9 @@ spec:
       name: submission
   selector:
     {{- include "postfix.selectorLabels" . | nindent 4 }}
+  {{- if .Values.service.ipFamilyPolicy }}
+  ipFamilyPolicy: {{ .Values.service.ipFamilyPolicy }}
+  {{- end }}
   {{- with .Values.service.externalIPs }}
   externalIPs:
     {{- toYaml . | nindent 4 }}

@@ -36,10 +36,17 @@ spec:
           env:
             - name: MYHOSTNAME
               value: "{{ .Values.postfix.hostname }}"
+            - name: MYNETWORKS
+              value: "{{ .Values.postfix.networks }}"
             - name: USERNAME
               value: "{{ .Values.postfix.username }}"
             - name: PASSWORD
-              value: "{{ .Values.postfix.password }}"
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "postfix.fullname" . }}
+                  key: password
+            - name: RELAYHOST
+              value: "{{ .Values.postfix.relayhost }}"
             - name: SSL_CERT_PATH
               value: "/var/run/certs/tls.crt"
             - name: SSL_KEY_PATH
