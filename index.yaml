@@ -64,6 +64,16 @@ entries:
   service:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2020-12-19T01:43:05.260349577Z"
+    description: A Kubernetes Service/Ingress
+    digest: cd88b864debbc10447fd04e47a149c36c3dbd4767705ee19135dcc7ed4399f1d
+    name: service
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/service-0.0.2/service-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2020-12-19T01:25:46.169474182Z"
     description: A Kubernetes Service/Ingress
     digest: 8f67450244691b220f43f00a8186130f6c60709d3b627675c0c22ce6933caef8
