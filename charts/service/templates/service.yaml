@@ -9,7 +9,7 @@ spec:
   ports:
     {{- toYaml .Values.service.ports | nindent 4 }}
   selector:
-    {{- include "service.selectorLabels" . | nindent 4 }}
+    {{- toYaml .Values.service.selector | nindent 4 }}
   {{- if .Values.service.ipFamilies }}
   ipFamilies:
     {{- toYaml .Values.service.ipFamilies | nindent 4 }}
