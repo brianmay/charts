@@ -1,0 +1,18 @@
+# Default values for service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+service:
+  type: ClusterIP
+  ports:
+  - name: web
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  app: webapp
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts: []
+  tls: []
