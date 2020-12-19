@@ -10,8 +10,7 @@ service:
     protocol: TCP
     targetPort: 80
   app: webapp
-  selector:
-    app: webapp
+  selector: {}
 
 ingress:
   enabled: false
