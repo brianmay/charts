@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  certificate:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2020-12-20T23:47:41.922084813Z"
+    description: A chart for a certificate
+    digest: 62c83138a170b1e97d92af864ba5466c6e48ba54449cb5ed51f9296aa08a7084
+    name: certificate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/certificate-0.0.0/certificate-0.0.0.tgz
+    version: 0.0.0
   postfix:
   - apiVersion: v2
     appVersion: sha-7a201d2
