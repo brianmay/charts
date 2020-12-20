@@ -3,6 +3,16 @@ entries:
   certificate:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2020-12-20T23:53:16.745273146Z"
+    description: A chart for a certificate
+    digest: 219e29a13ca771c57c1c59a40f3047923337a6181bc327c65cfba75ad5b3333b
+    name: certificate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/certificate-0.0.1/certificate-0.0.1.tgz
+    version: 0.0.1
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2020-12-20T23:47:41.922084813Z"
     description: A chart for a certificate
     digest: 62c83138a170b1e97d92af864ba5466c6e48ba54449cb5ed51f9296aa08a7084
