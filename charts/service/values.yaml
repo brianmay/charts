@@ -17,3 +17,11 @@ ingress:
   annotations: {}
   hosts: []
   tls: []
+
+certificate:
+  enabled: false
+  commonName: ""
+  secretName: ""
+  organization: ""
+  dnsNames: []
+  issuerRef: {}
