@@ -8,8 +8,13 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     {{- toYaml .Values.service.ports | nindent 4 }}
+  {{- if .Values.service.externalName }}
+  externalName: "{{- .Values.service.externalName }}"
+  {{- end }}
+  {{- if .Values.service.selector }}
   selector:
     {{- toYaml .Values.service.selector | nindent 4 }}
+  {{- end }}
   {{- if .Values.service.ipFamilies }}
   ipFamilies:
     {{- toYaml .Values.service.ipFamilies | nindent 4 }}
