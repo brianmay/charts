@@ -3,6 +3,7 @@
 # Declare variables to be passed into your templates.
 
 service:
+  enabled: true
   type: ClusterIP
   ports:
   - name: web
