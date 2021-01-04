@@ -11,7 +11,7 @@ spec:
   secretName: "{{- .Values.certificate.secretName }}"
   dnsNames:
     {{- toYaml .Values.certificate.dnsNames | nindent 4 }}
-  {{- if .Values.certificate.organizations -}}
+  {{- if .Values.certificate.organizations }}
   subject:
     organizations:
       {{- toYaml .Values.certificate.organizations | nindent 6 }}
