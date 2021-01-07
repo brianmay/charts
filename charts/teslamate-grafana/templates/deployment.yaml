@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "teslamate.fullname" . }}
+  labels:
+    {{- include "teslamate.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "teslamate.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "teslamate.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "teslamate.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      volumes:
+      - name: data
+        {{- toYaml .Values.volume | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: DATABASE_USER
+              value: "{{ .Values.teslamate.database.username }}"
+            - name: DATABASE_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "teslamate.fullname" . }}
+                  key: database_password
+            - name: DATABASE_NAME
+              value: "{{ .Values.teslamate.database.name }}"
+            - name: DATABASE_HOST
+              value: "{{ .Values.teslamate.database.host }}"
+          volumeMounts:
+          - name: data
+            mountPath: "var/lib/grafana"
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
