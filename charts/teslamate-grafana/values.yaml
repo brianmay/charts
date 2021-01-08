@@ -88,3 +88,4 @@ teslamate:
 grafana:
   username: admin
   password: admin
+  timezone: "Australia/Victoria"

@@ -71,6 +71,8 @@ spec:
                   key: grafana_password
             - name: GF_AUTH_ANONYMOUS_ENABLED
               value: "false"
+            - name: PGTZ
+              value: "{{ .Values.grafana.timezone }}"
           volumeMounts:
           - name: data
             mountPath: "var/lib/grafana"
