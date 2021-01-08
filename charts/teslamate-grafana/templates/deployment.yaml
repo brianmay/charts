@@ -62,6 +62,15 @@ spec:
               value: "{{ .Values.teslamate.database.name }}"
             - name: DATABASE_HOST
               value: "{{ .Values.teslamate.database.host }}"
+            - name: GF_SECURITY_ADMIN_USER
+              value: "{{ .Values.grafana.username }}"
+            - name: GF_SECURITY_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "teslamate.fullname" . }}
+                  key: grafana_password
+            - name: GF_AUTH_ANONYMOUS_ENABLED
+              value: "false"
           volumeMounts:
           - name: data
             mountPath: "var/lib/grafana"

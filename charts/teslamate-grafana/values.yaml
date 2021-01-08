@@ -84,3 +84,7 @@ teslamate:
     password: ""
     name: ""
     host: ""
+
+grafana:
+  username: admin
+  password: admin
