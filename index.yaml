@@ -166,6 +166,16 @@ entries:
   teslamate:
   - apiVersion: v2
     appVersion: 1.21.2
+    created: "2021-02-04T02:18:43.074765419Z"
+    description: Teslamate helm chart
+    digest: 139b9b8a4f38c5fed4a73ddec8f898d7217e79032b574757b417a8c71eda789f
+    name: teslamate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-0.0.3/teslamate-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 1.21.2
     created: "2021-02-02T06:43:07.186605803Z"
     description: Teslamate helm chart
     digest: 58dac0faa0d89417196a56afd3d997cc3c4a6e1f0a69cabf6d2d1a4c176d4980
