@@ -41,12 +41,14 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /health_check
               port: http
+            initialDelaySeconds: 60
           readinessProbe:
             httpGet:
-              path: /
+              path: /health_check
               port: http
+            initialDelaySeconds: 60
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           env:
