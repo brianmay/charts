@@ -1,0 +1,96 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "robotica-hello.fullname" . }}
+  labels:
+    {{- include "robotica-hello.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.deploymentAnnotations | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "robotica-hello.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "robotica-hello.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "robotica-hello.fullname" . }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "robotica-hello.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 4000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 4000
+            initialDelaySeconds: 60
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 4000
+          env:
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-hello.fullname" . }}
+                key: DATABASE_URL
+          - name: GUARDIAN_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-hello.fullname" . }}
+                key: GUARDIAN_SECRET
+          - name: SECRET_KEY_BASE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-hello.fullname" . }}
+                key: SECRET_KEY_BASE
+          - name: LOGIN_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-hello.fullname" . }}
+                key: LOGIN_SECRET
+          - name: ROBOTICA_HELLO_CONFIG
+            value: "/etc/robotica/hello.yaml"
+          - name: HTTP_HOST
+            value: "robotica.linuxpenguins.xyz"
+          volumeMounts:
+          - name: config-volume
+            mountPath: /etc/robotica
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
