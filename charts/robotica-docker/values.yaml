@@ -85,7 +85,7 @@ affinity: {}
 
 robotica:
   database_url: nil
-  guardian_secret: nil
   secret_key_base: nil
   login_secret: nil
+  signing_salt: nil
   instances: []
