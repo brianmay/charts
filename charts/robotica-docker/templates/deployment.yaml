@@ -1,0 +1,101 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "robotica-docker.fullname" . }}
+  labels:
+    {{- include "robotica-docker.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.deploymentAnnotations | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "robotica-docker.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "robotica-docker.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "robotica-docker.fullname" . }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "robotica-docker.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 4000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 4000
+            initialDelaySeconds: 60
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 4000
+          env:
+          - name: SECRET_KEY_BASE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-docker.fullname" . }}
+                key: SECRET_KEY_BASE
+          - name: LOGIN_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-docker.fullname" . }}
+                key: LOGIN_SECRET
+          - name: SIGNING_SALT
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "robotica-docker.fullname" . }}
+                key: SIGNING_SALT
+          - name: ROBOTICA_COMMON_CONFIG
+            value: "/etc/robotica/common.yaml"
+          - name: ROBOTICA_CONFIG
+            value: "/etc/robotica/config.yaml"
+          - name: ROBOTICA_CLASSIFICATIONS
+            value: "/etc/robotica/classifications.yaml"
+          - name: ROBOTICA_SCHEDULE
+            value: "/etc/robotica/schedule.yaml"
+          - name: ROBOTICA_SEQUENCES
+            value: "/etc/robotica/sequences.yaml"
+          - name: ROBOTICA_SCENES
+            value: "/etc/robotica/scenes.yaml"
+          - name: HTTP_HOST
+            value: "{{ .Values.robotica.http_host }}"
+          volumeMounts:
+          - name: config-volume
+            mountPath: /etc/robotica
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "robotica-docker.fullname" $ }}
+  labels:
+    {{- include "robotica-docker.selectorLabels" $ | nindent 4 }}
+    {{- include "robotica-docker.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "robotica-docker.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}
