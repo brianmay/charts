@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ include "teslamate.fullname" . }}-auth
+  labels:
+    {{- include "teslamate.labels" . | nindent 4 }}
+type: Opaque
+stringData:
+  auth: "{{ .Values.teslamate.basic_auth }}"

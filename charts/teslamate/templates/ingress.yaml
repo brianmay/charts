@@ -9,6 +9,9 @@ metadata:
     {{- include "teslamate.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: {{ include "teslamate.fullname" $ }}-auth
+    nginx.ingress.kubernetes.io/auth-realm: 'Authentication Required'
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
