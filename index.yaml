@@ -96,6 +96,16 @@ entries:
   robotica-docker:
   - apiVersion: v2
     appVersion: master
+    created: "2021-06-21T23:52:09.550411454Z"
+    description: Main deploy for robotica
+    digest: 08544489af4356ef040888f9f691f9219ddd842cf230d4612c6823f8ce184d35
+    name: robotica-docker
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-docker-0.0.2/robotica-docker-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: master
     created: "2021-06-21T10:13:32.787488299Z"
     description: Login host for robotica
     digest: e14693371930181e6cdb9371fd29b63b8812849aa6326f7bed8b572c3eb59299
