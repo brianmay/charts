@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "penguin-memories.fullname" $ }}
+  labels:
+    {{- include "penguin-memories.selectorLabels" $ | nindent 4 }}
+    {{- include "penguin-memories.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "penguin-memories.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "penguin-memories.fullname" . }}-test-connection"
+  labels:
+    {{- include "penguin-memories.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "penguin-memories.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

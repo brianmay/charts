@@ -1,0 +1,96 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "penguin-memories.fullname" . }}
+  labels:
+    {{- include "penguin-memories.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.deploymentAnnotations | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "penguin-memories.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "penguin-memories.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+      - name: images
+        {{- toYaml .Values.volume | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "penguin-memories.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 4000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 4000
+            initialDelaySeconds: 60
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 4000
+          env:
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-memories.fullname" . }}
+                key: DATABASE_URL
+          - name: GUARDIAN_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-memories.fullname" . }}
+                key: GUARDIAN_SECRET
+          - name: SECRET_KEY_BASE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-memories.fullname" . }}
+                key: SECRET_KEY_BASE
+          - name: SIGNING_SALT
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-memories.fullname" . }}
+                key: SIGNING_SALT
+          - name: IMAGE_DIR
+            value: "/opt/images"
+          - name: HTTP_HOST
+            value: {{  .Values.pm.http_host }}
+          volumeMounts:
+          - name: images
+            mountPath: "/opt/images"
+            readOnly: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

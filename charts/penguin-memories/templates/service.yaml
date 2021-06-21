@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "penguin-memories.fullname" . }}
+  labels:
+    {{- include "penguin-memories.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 4000
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "penguin-memories.selectorLabels" . | nindent 4 }}
