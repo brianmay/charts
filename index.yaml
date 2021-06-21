@@ -85,6 +85,16 @@ entries:
   robotica-hello:
   - apiVersion: v2
     appVersion: master
+    created: "2021-06-21T07:08:04.329662192Z"
+    description: Login host for robotica
+    digest: 7eaff52663b9f81f3a60be6448a089352932dddec214eb618448aea257be472f
+    name: robotica-hello
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.2/robotica-hello-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: master
     created: "2021-06-20T23:31:01.206580399Z"
     description: Login host for robotica
     digest: 73a0820f369c01949f953385e33d39c0a585c306ffa5ba53f2fd4a7f146d2920
