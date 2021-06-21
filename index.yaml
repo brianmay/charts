@@ -21,6 +21,17 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/certificate-0.0.0/certificate-0.0.0.tgz
     version: 0.0.0
+  penguin-memories:
+  - apiVersion: v2
+    appVersion: main
+    created: "2021-06-21T23:51:17.804497405Z"
+    description: Photo database
+    digest: c92de35ce8bcde6a51123326fd2a8319007df9b242d06b460b776865c0a565d0
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.1/penguin-memories-0.0.1.tgz
+    version: 0.0.1
   postfix:
   - apiVersion: v2
     appVersion: sha-7a201d2
