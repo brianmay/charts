@@ -82,6 +82,17 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/postfix-0.0.1/postfix-0.0.1.tgz
     version: 0.0.1
+  robotica-docker:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-06-21T10:13:32.787488299Z"
+    description: Login host for robotica
+    digest: e14693371930181e6cdb9371fd29b63b8812849aa6326f7bed8b572c3eb59299
+    name: robotica-docker
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-docker-0.0.1/robotica-docker-0.0.1.tgz
+    version: 0.0.1
   robotica-hello:
   - apiVersion: v2
     appVersion: master
