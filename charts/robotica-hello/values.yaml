@@ -67,6 +67,9 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+podDisruptionBudget:
+  minAvailable: 1
+
 autoscaling:
   enabled: false
   minReplicas: 1
