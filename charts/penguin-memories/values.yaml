@@ -85,8 +85,9 @@ affinity: {}
 
 volumes: {}
 
-robotica:
+pm:
   database_url: nil
   guardian_secret: nil
   secret_key_base: nil
   signing_salt: nil
+  http_host: nil
