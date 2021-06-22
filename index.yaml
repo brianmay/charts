@@ -24,6 +24,16 @@ entries:
   penguin-memories:
   - apiVersion: v2
     appVersion: main
+    created: "2021-06-22T23:49:34.659443396Z"
+    description: Photo database
+    digest: d107c4d91effa16ea4a61b15bc1387b214a383839d68ea3859d3e1d7b7233ea5
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.2/penguin-memories-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: main
     created: "2021-06-21T23:51:17.804497405Z"
     description: Photo database
     digest: c92de35ce8bcde6a51123326fd2a8319007df9b242d06b460b776865c0a565d0
@@ -144,6 +154,17 @@ entries:
     type: application
     urls:
     - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.1/robotica-hello-0.0.1.tgz
+    version: 0.0.1
+  scrooge:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-06-22T23:49:34.725781145Z"
+    description: Scrooge database
+    digest: 4b9e9efb8972ca07abe98f20247e09894c95ba95b25a6e2b8cf1b739685d3d76
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.1/scrooge-0.0.1.tgz
     version: 0.0.1
   service:
   - apiVersion: v2
