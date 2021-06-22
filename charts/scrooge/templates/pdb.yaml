@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "scrooge.fullname" $ }}
+  labels:
+    {{- include "scrooge.selectorLabels" $ | nindent 4 }}
+    {{- include "scrooge.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "scrooge.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}
