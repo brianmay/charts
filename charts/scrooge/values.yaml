@@ -84,6 +84,7 @@ tolerations: []
 affinity: {}
 
 scrooge:
+  http_host: nil
   database_url: nil
   guardian_secret: nil
   secret_key_base: nil

@@ -78,9 +78,11 @@ spec:
               secretKeyRef:
                 name: {{ include "scrooge.fullname" . }}
                 key: MQTT_PASSWORD
+          - name: HTTP_HOST
+            value: "{{ .Values.scrooge.http_host }}"
           - name: MQTT_HOST
             value: "{{ .Values.mqtt.host }}"
-          - name: MQTT_HOST
+          - name: MQTT_PORT
             value: "{{ .Values.mqtt.port }}"
           - name: MQTT_USER_NAME
             value: "{{ .Values.mqtt.user_name }}"
