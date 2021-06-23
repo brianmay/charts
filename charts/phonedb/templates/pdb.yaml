@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "phonedb.fullname" $ }}
+  labels:
+    {{- include "phonedb.selectorLabels" $ | nindent 4 }}
+    {{- include "phonedb.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "phonedb.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}
