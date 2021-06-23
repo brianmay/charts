@@ -36,20 +36,6 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/keel-0.9.8-brian.1/keel-0.9.8-brian.1.tgz
     version: 0.9.8-brian.1
-  - apiVersion: v2
-    appVersion: 0.16.1
-    created: "2021-06-23T22:59:08.180397316Z"
-    dependencies:
-    - name: keel
-      repository: https://charts.keel.sh
-      version: 0.9.8
-    description: keel deployment
-    digest: b1814362c1598fb7ad1cbe8241062d2798288d3b568f0daa257e9b537537ed29
-    name: keel
-    type: application
-    urls:
-    - https://github.com/brianmay/charts/releases/download/keel-0.9.8.1/keel-0.9.8.1.tgz
-    version: 0.9.8.1
   penguin-memories:
   - apiVersion: v2
     appVersion: main
