@@ -1,0 +1,12 @@
+apiVersion: v2
+name: keel
+description: keel deployment
+
+type: application
+version: 0.9.8
+appVersion: 0.9.8
+
+dependencies:
+  - name: keel
+    version: 0.9.8
+    repository: https://charts.keel.sh
