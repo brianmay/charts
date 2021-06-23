@@ -42,6 +42,17 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.1/penguin-memories-0.0.1.tgz
     version: 0.0.1
+  phonedb:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-06-23T22:25:56.820191765Z"
+    description: Phone calls database
+    digest: 5510b16c0b4e7c122cc870e2705106efd6fa49cc409cce33cd3d48beabdff717
+    name: phonedb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/phonedb-0.0.1/phonedb-0.0.1.tgz
+    version: 0.0.1
   postfix:
   - apiVersion: v2
     appVersion: sha-7a201d2
