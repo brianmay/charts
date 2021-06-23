@@ -24,6 +24,20 @@ entries:
   keel:
   - apiVersion: v2
     appVersion: 0.16.1
+    created: "2021-06-23T23:04:28.384770241Z"
+    dependencies:
+    - name: keel
+      repository: https://charts.keel.sh
+      version: 0.9.8
+    description: keel deployment
+    digest: d695c4563de455b5137748c8c2741537d1a122a856843b351e572c60597b08ef
+    name: keel
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/keel-0.9.8-brian.1/keel-0.9.8-brian.1.tgz
+    version: 0.9.8-brian.1
+  - apiVersion: v2
+    appVersion: 0.16.1
     created: "2021-06-23T22:59:08.180397316Z"
     dependencies:
     - name: keel
