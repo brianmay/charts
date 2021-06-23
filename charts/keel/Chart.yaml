@@ -4,7 +4,7 @@ description: keel deployment
 
 type: application
 version: 0.9.8
-appVersion: 0.9.8
+appVersion: 0.16.1
 
 dependencies:
   - name: keel
