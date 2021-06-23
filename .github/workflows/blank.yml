@@ -19,6 +19,10 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
+      - name: Configure Helm
+        run: |
+          helm repo add keel https://charts.keel.sh
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.1.0
         env:
