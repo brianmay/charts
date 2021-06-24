@@ -80,7 +80,7 @@ spec:
             value: "{{ .Values.ldap.server }}"
           - name: LDAP_BASE_DN
             value: "{{ .Values.ldap.base_dn }}"
-          - name: LDAP_USER_NAME
+          - name: LDAP_USERNAME
             value: "{{ .Values.ldap.user_name }}"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
