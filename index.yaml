@@ -110,6 +110,21 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/mqtt-2.3.0/mqtt-2.3.0.tgz
     version: 2.3.0
+  node-red:
+  - apiVersion: v2
+    appVersion: 1.2.5
+    created: "2021-06-24T06:38:51.312039835Z"
+    dependencies:
+    - name: node-red
+      repository: https://k8s-at-home.com/charts/
+      version: 7.2.0
+    description: node-red deployment
+    digest: ec90348364ff90d78e9bfe620eb07bccf7ebe547d555dfaf89f57fbcb8b7ecfa
+    name: node-red
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/node-red-7.2.0/node-red-7.2.0.tgz
+    version: 7.2.0
   penguin-memories:
   - apiVersion: v2
     appVersion: main
@@ -469,4 +484,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-24T06:09:31.50973457Z"
+generated: "2021-06-24T06:38:51.312122134Z"
