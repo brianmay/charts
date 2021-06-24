@@ -22,6 +22,7 @@ jobs:
       - name: Configure Helm
         run: |
           helm repo add keel https://charts.keel.sh
+          helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1

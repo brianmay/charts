@@ -1,0 +1,12 @@
+apiVersion: v2
+name: ingress-nginx-int
+description: ingress-nginx-int deployment
+
+type: application
+version: 3.29.0
+appVersion: 0.45.0
+
+dependencies:
+  - name: ingress-nginx
+    version: 3.29.0
+    repository: https://kubernetes.github.io/ingress-nginx
