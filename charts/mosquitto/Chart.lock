@@ -1,0 +1,6 @@
+dependencies:
+- name: mosquitto
+  repository: https://storage.googleapis.com/t3n-helm-charts
+  version: 2.3.0
+digest: sha256:ba936928396db23a78b6dd8f75f2b41fd79db4a4641740299ded6a3dd834f39b
+generated: "2021-06-24T16:02:13.945521103+10:00"

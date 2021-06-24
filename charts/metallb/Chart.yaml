@@ -3,7 +3,7 @@ name: metallb
 description: metallb deployment
 
 type: application
-version: 2.3.5
+version: 2.3.5-brian.1
 appVersion: 0.9.6
 
 dependencies:
