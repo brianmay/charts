@@ -66,6 +66,21 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/keel-0.9.8-brian.1/keel-0.9.8-brian.1.tgz
     version: 0.9.8-brian.1
+  metallb:
+  - apiVersion: v2
+    appVersion: 0.9.6
+    created: "2021-06-24T05:47:54.175378743Z"
+    dependencies:
+    - name: metallb
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.3.5
+    description: metallb deployment
+    digest: a0f85be874a66cd0327d5311943726f6fd828f6271dc759dd060f2aa826172d1
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metallb-2.3.5/metallb-2.3.5.tgz
+    version: 2.3.5
   penguin-memories:
   - apiVersion: v2
     appVersion: main
@@ -425,4 +440,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-24T05:36:23.637959978Z"
+generated: "2021-06-24T05:47:54.175448244Z"
