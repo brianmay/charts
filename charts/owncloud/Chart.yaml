@@ -1,0 +1,12 @@
+apiVersion: v2
+name: owncloud
+description: owncloud deployment
+
+type: application
+version: 10.2.6
+appVersion: 10.7.0
+
+dependencies:
+  - name: owncloud
+    version: 10.2.6
+    repository: https://charts.bitnami.com/bitnami
