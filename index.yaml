@@ -95,6 +95,21 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/metallb-2.3.5-brian.1/metallb-2.3.5-brian.1.tgz
     version: 2.3.5-brian.1
+  metrics-server:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2021-06-24T22:27:23.648075641Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.8.11
+    description: metrics-server deployment
+    digest: 28dc702e9dbdaaa8dd9a26fe310ba9dbc59b1d763d5ffdc92713d1c65fe11cd2
+    name: metrics-server
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metrics-server-5.8.11/metrics-server-5.8.11.tgz
+    version: 5.8.11
   mqtt:
   - apiVersion: v2
     appVersion: 2.0.7
@@ -513,4 +528,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-24T07:25:34.865700691Z"
+generated: "2021-06-24T22:27:23.648146641Z"
