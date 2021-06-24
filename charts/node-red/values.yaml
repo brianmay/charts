@@ -1,0 +1,43 @@
+node-red:
+  env:
+    TZ: "Australia/Melbourne"
+  additionalVolumes:
+    - name: data
+      nfs:
+        path: /mnt/main/node-red
+        server: minion.pri
+  additionalVolumeMounts:
+    - name: data
+      mountPath: /data
+  service:
+    nameSuffix: "service"
+
+service:
+  service:
+    enabled: false
+
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: "nginx-int"
+    hosts:
+      - host: "node-red.linuxpenguins.xyz"
+        paths:
+          - "/"
+    targetPort: 1880
+    tls:
+      - secretName: node-red-cert
+        hosts:
+        - "node-red.linuxpenguins.xyz"
+
+  certificate:
+    enabled: true
+    commonName: "node-red.linuxpenguins.xyz"
+    dnsNames:
+      - "node-red.linuxpenguins.xyz"
+    organizations:
+      - "Linux Penguins"
+    issuerRef:
+      kind: ClusterIssuer
+      name: ca-issuer
+    secretName: node-red-cert
