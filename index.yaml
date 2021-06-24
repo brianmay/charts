@@ -139,6 +139,21 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/node-red-7.2.0-brian.1/node-red-7.2.0-brian.1.tgz
     version: 7.2.0-brian.1
+  owncloud:
+  - apiVersion: v2
+    appVersion: 10.7.0
+    created: "2021-06-24T07:25:34.86561269Z"
+    dependencies:
+    - name: owncloud
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.6
+    description: owncloud deployment
+    digest: 45402a4d952ed334b9f082432a2e39e3e014cc4fea0d4c94c10e42c551d85903
+    name: owncloud
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/owncloud-10.2.6/owncloud-10.2.6.tgz
+    version: 10.2.6
   penguin-memories:
   - apiVersion: v2
     appVersion: main
@@ -498,4 +513,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-24T07:13:22.331353536Z"
+generated: "2021-06-24T07:25:34.865700691Z"
