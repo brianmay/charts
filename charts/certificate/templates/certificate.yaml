@@ -1,4 +1,4 @@
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: {{ include "certificate.fullname" . }}
@@ -9,6 +9,11 @@ spec:
   {{- if .Values.certificate.dnsNames }}
   dnsNames:
     {{- toYaml .Values.certificate.dnsNames | nindent 4 }}
+  {{- end }}
+  {{- if .Values.certificate.organizations }}
+  subject:
+    organizations:
+      {{- toYaml .Values.certificate.organizations | nindent 6 }}
   {{- end }}
   {{- if .Values.certificate.issuerRef }}
   issuerRef:
