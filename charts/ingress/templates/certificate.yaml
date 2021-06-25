@@ -1,0 +1,24 @@
+{{- if .Values.certificate.enabled -}}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ include "ingress.fullname" . }}
+  labels:
+    {{- include "ingress.labels" . | nindent 4 }}
+spec:
+  commonName: {{ .Values.certificate.commonName }}
+  {{- if .Values.certificate.dnsNames }}
+  dnsNames:
+    {{- toYaml .Values.certificate.dnsNames | nindent 4 }}
+  {{- end }}
+  {{- if .Values.certificate.organizations }}
+  subject:
+    organizations:
+      {{- toYaml .Values.certificate.organizations | nindent 6 }}
+  {{- end }}
+  {{- if .Values.certificate.issuerRef }}
+  issuerRef:
+    {{- toYaml .Values.certificate.issuerRef | nindent 4 }}
+  {{- end }}
+  secretName: {{ include "ingress.secretname" . }}
+{{- end }}

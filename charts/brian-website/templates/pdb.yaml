@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "brian-website.fullname" $ }}
+  labels:
+    {{- include "brian-website.selectorLabels" $ | nindent 4 }}
+    {{- include "brian-website.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "brian-website.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}

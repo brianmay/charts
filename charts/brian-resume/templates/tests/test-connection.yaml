@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "brian-resume.fullname" . }}-test-connection"
+  labels:
+    {{- include "brian-resume.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "brian-resume.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

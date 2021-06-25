@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "linuxpenguins-website.fullname" $ }}
+  labels:
+    {{- include "linuxpenguins-website.selectorLabels" $ | nindent 4 }}
+    {{- include "linuxpenguins-website.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "linuxpenguins-website.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}
