@@ -18,6 +18,16 @@ entries:
   certificate:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2021-06-25T00:19:42.177057745Z"
+    description: A chart for a certificate
+    digest: 227a3002e5a329bf11a99cdd019f4ad0f8da8f8254a6bee7bd20ea051a48d567
+    name: certificate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/certificate-0.0.2/certificate-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2020-12-20T23:53:16.745273146Z"
     description: A chart for a certificate
     digest: 219e29a13ca771c57c1c59a40f3047923337a6181bc327c65cfba75ad5b3333b
@@ -538,4 +548,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-24T23:46:34.402700456Z"
+generated: "2021-06-25T00:19:42.177196554Z"
