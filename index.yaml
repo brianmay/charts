@@ -129,6 +129,21 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/keel-0.9.8-brian.1/keel-0.9.8-brian.1.tgz
     version: 0.9.8-brian.1
+  kube-prometheus-stack:
+  - apiVersion: v2
+    appVersion: 0.48.1
+    created: "2021-06-26T00:41:08.464566017Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 16.11.0
+    description: kube-prometheus-stack deployment
+    digest: 4a6da77490f1d62861e92888d9e9a4692ecbe3beadf3b468e34f611988ecded2
+    name: kube-prometheus-stack
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/kube-prometheus-stack-16.11.0/kube-prometheus-stack-16.11.0.tgz
+    version: 16.11.0
   linuxpenguins-website:
   - apiVersion: v2
     appVersion: master
@@ -692,4 +707,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-26T00:33:31.032677244Z"
+generated: "2021-06-26T00:41:08.464665518Z"
