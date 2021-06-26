@@ -1,10 +1,12 @@
 #!/bin/bash
 set -e
 
+helm repo update
+
 for chart in charts/*; do
     test -f "$chart/Chart.yaml" || continue
 
-    helm dependency update "$chart" > /dev/null
+    helm dependency update --skip-refresh "$chart" > /dev/null
 
     while IFS= read -r dependency; do
         test -n "$dependency" || continue
