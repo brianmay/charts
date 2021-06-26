@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "teslamate.fullname" . }}
+  name: {{ include "teslamate-grafana.fullname" . }}
   labels:
-    {{- include "teslamate.labels" . | nindent 4 }}
+    {{- include "teslamate-grafana.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "teslamate.selectorLabels" . | nindent 6 }}
+      {{- include "teslamate-grafana.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "teslamate.selectorLabels" . | nindent 8 }}
+        {{- include "teslamate-grafana.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "teslamate.serviceAccountName" . }}
+      serviceAccountName: {{ include "teslamate-grafana.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       volumes:
@@ -56,7 +56,7 @@ spec:
             - name: DATABASE_PASS
               valueFrom:
                 secretKeyRef:
-                  name: {{ template "teslamate.fullname" . }}
+                  name: {{ template "teslamate-grafana.fullname" . }}
                   key: database_password
             - name: DATABASE_NAME
               value: "{{ .Values.teslamate.database.name }}"
@@ -67,7 +67,7 @@ spec:
             - name: GF_SECURITY_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: {{ template "teslamate.fullname" . }}
+                  name: {{ template "teslamate-grafana.fullname" . }}
                   key: grafana_password
             - name: GF_AUTH_ANONYMOUS_ENABLED
               value: "false"

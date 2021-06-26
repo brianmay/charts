@@ -83,7 +83,7 @@ tolerations: []
 
 affinity: {}
 
-volumes: {}
+volume: {}
 
 pm:
   database_url: nil
