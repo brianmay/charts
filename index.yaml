@@ -44,6 +44,20 @@ entries:
     version: 0.0.0
   cert-manager:
   - apiVersion: v2
+    appVersion: 1.4.0
+    created: "2021-06-26T01:02:36.761660439Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.4.0
+    description: cert-manager deployment
+    digest: 2829b8dceb8c2a1284f4d50ec1b541c41a6fd0f20943cf66d92055510a328ef2
+    name: cert-manager
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/cert-manager-1.4.0/cert-manager-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v2
     appVersion: 1.3.0
     created: "2021-06-24T05:36:23.637875377Z"
     dependencies:
@@ -749,4 +763,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-26T00:55:18.00208024Z"
+generated: "2021-06-26T01:02:36.761777239Z"
