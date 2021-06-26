@@ -239,6 +239,20 @@ entries:
     version: 5.8.11
   mqtt:
   - apiVersion: v2
+    appVersion: 1.6.12
+    created: "2021-06-26T00:55:18.001586837Z"
+    dependencies:
+    - name: mosquitto
+      repository: https://storage.googleapis.com/t3n-helm-charts
+      version: 2.4.0
+    description: mqtt Daemon
+    digest: a155ca8d2c765db3b3d20abfce33db3eeafe8bbbb20f0bf77ba016f906a55a11
+    name: mqtt
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/mqtt-2.4.0/mqtt-2.4.0.tgz
+    version: 2.4.0
+  - apiVersion: v2
     appVersion: 2.0.7
     created: "2021-06-24T06:09:31.509406268Z"
     dependencies:
@@ -735,4 +749,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-26T00:49:13.727779379Z"
+generated: "2021-06-26T00:55:18.00208024Z"
