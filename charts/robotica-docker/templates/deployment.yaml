@@ -63,7 +63,7 @@ spec:
                 fieldPath: status.podIP
           - name: KUBERNETES_SELECTOR
             value: "{{ .Values.kubernetes_selector }}"
-          - name: ELIXIR_COOKIE
+          - name: RELEASE_COOKIE
             value: "{{ .Values.elixir_cookie }}"
           - name: SECRET_KEY_BASE
             valueFrom:
