@@ -355,6 +355,16 @@ entries:
   penguin-memories:
   - apiVersion: v2
     appVersion: main
+    created: "2021-06-30T10:18:45.486241032Z"
+    description: Photo database
+    digest: 4a4bf5621b51b14bfe8a013b7fc1812b2845e0012bee1ab4b8acbf3e810a9f76
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.6/penguin-memories-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: main
     created: "2021-06-30T10:06:39.448814658Z"
     description: Photo database
     digest: 530d0db955881f55a4e70e4882ce33925e9d3e6526d7d6e86d78bdfd33a3e191
@@ -404,6 +414,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.1/penguin-memories-0.0.1.tgz
     version: 0.0.1
   phonedb:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-06-30T10:18:45.567489742Z"
+    description: Phone calls database
+    digest: 8e6185509782b5c814d3170ab7d54396b850779ffcac3f8a0522b0167fcb22fc
+    name: phonedb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/phonedb-0.0.6/phonedb-0.0.6.tgz
+    version: 0.0.6
   - apiVersion: v2
     appVersion: master
     created: "2021-06-30T10:06:39.577779354Z"
@@ -518,6 +538,16 @@ entries:
   robotica-docker:
   - apiVersion: v2
     appVersion: master
+    created: "2021-06-30T10:18:45.634249577Z"
+    description: Main deploy for robotica
+    digest: 8a682f3f844017cb5288fc1b860ea6f6c1cb7b5b86d7d408c38ee36a159d7dd2
+    name: robotica-docker
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-docker-0.0.6/robotica-docker-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: master
     created: "2021-06-30T10:06:39.666740134Z"
     description: Main deploy for robotica
     digest: 9e67e89df8195ad4d3a52a3ecdb071f042e2b3eb49d15252d8b09f232cb838d6
@@ -608,6 +638,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.1/robotica-hello-0.0.1.tgz
     version: 0.0.1
   scrooge:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-06-30T10:18:45.705727575Z"
+    description: Scrooge database
+    digest: 99a0d84df5658b257edaed86138c507b4d3baeb4ae9e104fbf7024cc60d00ead
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.7/scrooge-0.0.7.tgz
+    version: 0.0.7
   - apiVersion: v2
     appVersion: master
     created: "2021-06-30T10:06:39.750733765Z"
@@ -871,4 +911,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-06-30T10:06:39.750901773Z"
+generated: "2021-06-30T10:18:45.70589337Z"
