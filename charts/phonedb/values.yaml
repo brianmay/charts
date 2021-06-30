@@ -85,6 +85,9 @@ affinity: {}
 
 kubernetes_selector: "app.kubernetes.io/instance=phonedb"
 
+# Base.url_encode64(:crypto.strong_rand_bytes(40))
+elixir_cookie: nil
+
 phonedb:
   http_host: nil
   database_url: nil
