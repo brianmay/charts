@@ -83,6 +83,8 @@ tolerations: []
 
 affinity: {}
 
+kubernetes_selector: "app.kubernetes.io/instance=phonedb"
+
 phonedb:
   http_host: nil
   database_url: nil

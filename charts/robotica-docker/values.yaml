@@ -83,6 +83,8 @@ tolerations: []
 
 affinity: {}
 
+kubernetes_selector: "app.kubernetes.io/instance=scrooge"
+
 robotica:
   database_url: nil
   secret_key_base: nil

@@ -83,7 +83,10 @@ tolerations: []
 
 affinity: {}
 
+kubernetes_selector: "app.kubernetes.io/instance=penguin-memories"
+
 volume: {}
+
 
 pm:
   database_url: nil

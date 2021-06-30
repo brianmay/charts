@@ -53,6 +53,16 @@ spec:
               path: /
               port: 4000
           env:
+          - name: NAMESPACE
+            valueFrom:
+              fieldRef:
+               fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: KUBERNETES_SELECTOR
+            value: "{{ .Values.kubernetes_selector }}"
           - name: SECRET_KEY_BASE
             valueFrom:
               secretKeyRef:
