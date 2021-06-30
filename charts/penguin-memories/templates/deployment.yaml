@@ -61,7 +61,7 @@ spec:
               fieldRef:
                 fieldPath: status.podIP
           - name: KUBERNETES_SELECTOR
-            value: "{{ .Values.kubernetes_selector }}"
+            value: "app.kubernetes.io/instance={{ include "penguin-memories.name" . }}"
           - name: RELEASE_COOKIE
             value: "{{ .Values.elixir_cookie }}"
           - name: DATABASE_URL
