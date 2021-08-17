@@ -282,6 +282,20 @@ entries:
     version: 2.3.0
   node-red:
   - apiVersion: v2
+    appVersion: 1.3.5
+    created: "2021-08-17T23:18:10.703158811Z"
+    dependencies:
+    - name: node-red
+      repository: https://k8s-at-home.com/charts/
+      version: 9.0.0
+    description: node-red deployment
+    digest: fa1439e6bda66e7f210c5ae748f0025357b663338c3a0522066af88c6a78fed5
+    name: node-red
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/node-red-9.0.0/node-red-9.0.0.tgz
+    version: 9.0.0
+  - apiVersion: v2
     appVersion: 1.2.5
     created: "2021-06-26T01:03:43.413656658Z"
     dependencies:
@@ -971,4 +985,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-07-25T22:52:22.625738157Z"
+generated: "2021-08-17T23:18:10.703356728Z"
