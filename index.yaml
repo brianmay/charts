@@ -238,6 +238,20 @@ entries:
   metallb:
   - apiVersion: v2
     appVersion: 0.10.2
+    created: "2021-08-18T00:35:02.027752491Z"
+    dependencies:
+    - name: metallb
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.5.2
+    description: metallb deployment
+    digest: bfe2891c7add213461de4970a5f0c7891382bec2470f8fde1c0ffd49100ff6c2
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metallb-2.5.2/metallb-2.5.2.tgz
+    version: 2.5.2
+  - apiVersion: v2
+    appVersion: 0.10.2
     created: "2021-06-26T00:49:13.727616271Z"
     dependencies:
     - name: metallb
@@ -281,6 +295,20 @@ entries:
   metrics-server:
   - apiVersion: v2
     appVersion: 0.5.0
+    created: "2021-08-18T00:35:02.240200142Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.9.2
+    description: metrics-server deployment
+    digest: eadbd0c3299f091351036b9f8c811ce5fa2e8ae919d01c73a503ba702032c484
+    name: metrics-server
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metrics-server-5.9.2/metrics-server-5.9.2.tgz
+    version: 5.9.2
+  - apiVersion: v2
+    appVersion: 0.5.0
     created: "2021-06-24T22:27:23.648075641Z"
     dependencies:
     - name: metrics-server
@@ -294,6 +322,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/metrics-server-5.8.11/metrics-server-5.8.11.tgz
     version: 5.8.11
   mqtt:
+  - apiVersion: v2
+    appVersion: 1.6.12
+    created: "2021-08-18T00:35:02.358912726Z"
+    dependencies:
+    - name: mosquitto
+      repository: https://storage.googleapis.com/t3n-helm-charts
+      version: 2.4.1
+    description: mqtt Daemon
+    digest: 83f9e71bb361075c61d5f1292c5378f891a5338c3a70fc4685d16fe14a1e5956
+    name: mqtt
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/mqtt-2.4.1/mqtt-2.4.1.tgz
+    version: 2.4.1
   - apiVersion: v2
     appVersion: 1.6.12
     created: "2021-06-26T00:55:18.001586837Z"
@@ -380,6 +422,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/node-red-7.2.0-brian.1/node-red-7.2.0-brian.1.tgz
     version: 7.2.0-brian.1
   owncloud:
+  - apiVersion: v2
+    appVersion: 10.8.0
+    created: "2021-08-18T00:35:02.504689095Z"
+    dependencies:
+    - name: owncloud
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.22
+    description: owncloud deployment
+    digest: 802030cab2461bff6ba9274bd02d3de7301637b3ecf4e39302d376502904cf17
+    name: owncloud
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/owncloud-10.2.22/owncloud-10.2.22.tgz
+    version: 10.2.22
   - apiVersion: v2
     appVersion: 10.7.0
     created: "2021-06-26T01:09:29.24102456Z"
@@ -1027,4 +1083,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-08-18T00:26:20.861570145Z"
+generated: "2021-08-18T00:35:02.504894502Z"
