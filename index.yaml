@@ -44,6 +44,20 @@ entries:
     version: 0.0.0
   cert-manager:
   - apiVersion: v2
+    appVersion: 1.5.1
+    created: "2021-08-18T00:26:20.636623755Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.5.1
+    description: cert-manager deployment
+    digest: e238399e534c768417e23f464b890535887486bd9375632400240b88f1d4ff1b
+    name: cert-manager
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/cert-manager-1.5.1/cert-manager-1.5.1.tgz
+    version: 1.5.1
+  - apiVersion: v2
     appVersion: 1.4.0
     created: "2021-06-26T01:02:36.761660439Z"
     dependencies:
@@ -115,6 +129,20 @@ entries:
     version: 0.0.0
   ingress-nginx-int:
   - apiVersion: v2
+    appVersion: 0.48.1
+    created: "2021-08-18T00:26:20.73942857Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 3.35.0
+    description: ingress-nginx-int deployment
+    digest: a40caa138e732df556cfec7ea51f977c6abd12dc6a26ddd6bdc97cca7a4abb0d
+    name: ingress-nginx-int
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/ingress-nginx-int-3.35.0/ingress-nginx-int-3.35.0.tgz
+    version: 3.35.0
+  - apiVersion: v2
     appVersion: 0.47.0
     created: "2021-06-26T00:47:10.120353573Z"
     dependencies:
@@ -158,6 +186,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/keel-0.9.8-brian.1/keel-0.9.8-brian.1.tgz
     version: 0.9.8-brian.1
   kube-prometheus-stack:
+  - apiVersion: v2
+    appVersion: 0.50.0
+    created: "2021-08-18T00:26:20.861408442Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 18.0.0
+    description: kube-prometheus-stack deployment
+    digest: b40c8009d41bb2cc2edffad4916d0d4ead769ad4884a0781d7b60b4f029fa564
+    name: kube-prometheus-stack
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/kube-prometheus-stack-18.0.0/kube-prometheus-stack-18.0.0.tgz
+    version: 18.0.0
   - apiVersion: v2
     appVersion: 0.48.1
     created: "2021-06-26T00:41:08.464566017Z"
@@ -985,4 +1027,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-08-17T23:18:10.703356728Z"
+generated: "2021-08-18T00:26:20.861570145Z"
