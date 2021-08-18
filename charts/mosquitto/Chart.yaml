@@ -3,10 +3,10 @@ name: mqtt
 description: mqtt Daemon
 
 type: application
-version: 2.4.0
+version: 2.4.1
 appVersion: 1.6.12
 
 dependencies:
   - name: mosquitto
-    version: 2.4.0
+    version: 2.4.1
     repository: https://storage.googleapis.com/t3n-helm-charts
