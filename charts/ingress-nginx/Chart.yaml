@@ -3,10 +3,10 @@ name: ingress-nginx-int
 description: ingress-nginx-int deployment
 
 type: application
-version: 3.34.0
-appVersion: 0.47.0
+version: 3.35.0
+appVersion: 0.48.1
 
 dependencies:
   - name: ingress-nginx
-    version: 3.34.0
+    version: 3.35.0
     repository: https://kubernetes.github.io/ingress-nginx
