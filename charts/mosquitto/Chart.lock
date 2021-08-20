@@ -1,6 +1,6 @@
 dependencies:
 - name: mosquitto
-  repository: https://storage.googleapis.com/t3n-helm-charts
-  version: 2.4.1
-digest: sha256:2a91c33c860598235a32b26009bab3979ccdeb86e91fa895bbf9f57aa6e1d47d
-generated: "2021-08-18T10:31:43.317603369+10:00"
+  repository: https://k8s-at-home.com/charts/
+  version: 4.0.0
+digest: sha256:66876c355e5ea428376179956ed7d1e7b1b9948225a199f5898f5bd7ae11c0b9
+generated: "2021-08-20T08:31:22.357603521+10:00"
