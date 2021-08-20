@@ -323,6 +323,20 @@ entries:
     version: 5.8.11
   mqtt:
   - apiVersion: v2
+    appVersion: 2.0.11
+    created: "2021-08-20T00:10:38.791506762Z"
+    dependencies:
+    - name: mosquitto
+      repository: https://k8s-at-home.com/charts/
+      version: 4.0.0
+    description: mqtt Daemon
+    digest: 61624925e308ca64e8a97f5bb4007864adab1b52a844117c3b726a42fb032dee
+    name: mqtt
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/mqtt-4.0.0/mqtt-4.0.0.tgz
+    version: 4.0.0
+  - apiVersion: v2
     appVersion: 1.6.12
     created: "2021-08-18T00:35:02.358912726Z"
     dependencies:
@@ -1083,4 +1097,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-08-18T00:35:02.504894502Z"
+generated: "2021-08-20T00:10:38.791993299Z"
