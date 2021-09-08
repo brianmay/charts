@@ -3,6 +3,16 @@ entries:
   brian-resume:
   - apiVersion: v2
     appVersion: master
+    created: "2021-09-08T23:04:45.384329104Z"
+    description: Brian's resume
+    digest: b8db92246bb0185073a8510a9880f3ba1a19e4d66ce64e948dc6e3cdd0333f54
+    name: brian-resume
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/brian-resume-0.0.2/brian-resume-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: master
     created: "2021-06-26T00:33:30.260083522Z"
     description: Brian's resume
     digest: 731f902c22ac9f337b208ed520d63c196558dcfc0e7ab981d74210bd5fd6d7f9
@@ -22,6 +32,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/brian-resume-0.0.0/brian-resume-0.0.0.tgz
     version: 0.0.0
   brian-website:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-08T23:04:45.528741166Z"
+    description: LinuxPenguin's website
+    digest: 2fb470dee50bb18f558dafaf5d4a7b78c5c9ec3576cdf8232b3282c328b24985
+    name: brian-website
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/brian-website-0.0.2/brian-website-0.0.2.tgz
+    version: 0.0.2
   - apiVersion: v2
     appVersion: master
     created: "2021-06-26T00:33:30.329492412Z"
@@ -131,6 +151,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/certificate-0.0.0/certificate-0.0.0.tgz
     version: 0.0.0
   ingress:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2021-09-08T23:04:45.687006725Z"
+    description: A Kubernetes Ingress
+    digest: dce44ac3313cbc59cbd787b897ff11bdccc33c591a623da5dfbcf79b062f157b
+    name: ingress
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/ingress-0.0.1/ingress-0.0.1.tgz
+    version: 0.0.1
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2021-06-25T00:48:08.281363733Z"
@@ -243,6 +273,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/kube-prometheus-stack-16.11.0/kube-prometheus-stack-16.11.0.tgz
     version: 16.11.0
   linuxpenguins-website:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-08T23:04:45.84140316Z"
+    description: Brian's website
+    digest: f758ee9dfb456de41c0f4abe47b806bc5f061c9ff9825f89522e786df310f8f3
+    name: linuxpenguins-website
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/linuxpenguins-website-0.0.2/linuxpenguins-website-0.0.2.tgz
+    version: 0.0.2
   - apiVersion: v2
     appVersion: master
     created: "2021-06-26T00:33:30.408212335Z"
@@ -551,6 +591,16 @@ entries:
   penguin-memories:
   - apiVersion: v2
     appVersion: main
+    created: "2021-09-08T23:04:45.982043412Z"
+    description: Photo database
+    digest: 23c8f27c30e0bd7e7b5cd3ab7fbe625b65e145b565e06f34d85eb36efae1c453
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.8/penguin-memories-0.0.8.tgz
+    version: 0.0.8
+  - apiVersion: v2
+    appVersion: main
     created: "2021-06-30T21:35:14.530077499Z"
     description: Photo database
     digest: 2c96d2fe3127537746d09eae0328cb7d51245c1a0b9314c26a57abb52e983d48
@@ -620,6 +670,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.1/penguin-memories-0.0.1.tgz
     version: 0.0.1
   phonedb:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-08T23:04:46.139347865Z"
+    description: Phone calls database
+    digest: 54602725dc171063b00398c53f4f5545b408c92940ae3e37acb705943f4d7618
+    name: phonedb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/phonedb-0.0.8/phonedb-0.0.8.tgz
+    version: 0.0.8
   - apiVersion: v2
     appVersion: master
     created: "2021-06-30T21:35:14.765540279Z"
@@ -693,6 +753,16 @@ entries:
   postfix:
   - apiVersion: v2
     appVersion: sha-7a201d2
+    created: "2021-09-08T23:04:46.283605439Z"
+    description: A simple Postfix server
+    digest: 86d879fe9f3e93ec62026bea9d36bf5061282c0a050b37069a1ab07fe87e4f01
+    name: postfix
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/postfix-0.0.7/postfix-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: sha-7a201d2
     created: "2020-12-18T08:38:49.841325396Z"
     description: A simple Postfix server
     digest: 8c50c17a36330282b4a5b3250a3b114436653c7749b621721e69da92e6b10869
@@ -752,6 +822,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/postfix-0.0.1/postfix-0.0.1.tgz
     version: 0.0.1
   robotica-docker:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-08T23:04:46.433685648Z"
+    description: Main deploy for robotica
+    digest: 84051671ab8eed5153055c79700910dd0f93607074ccd077adca9291495732c6
+    name: robotica-docker
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-docker-0.0.8/robotica-docker-0.0.8.tgz
+    version: 0.0.8
   - apiVersion: v2
     appVersion: master
     created: "2021-06-30T21:35:14.918180073Z"
@@ -825,6 +905,16 @@ entries:
   robotica-hello:
   - apiVersion: v2
     appVersion: master
+    created: "2021-09-08T23:04:46.599234651Z"
+    description: Login host for robotica
+    digest: f8c55d81cc41acc4ce45cea2b6cf5d3d3c32f78d7e70472baba192db4c8f0144
+    name: robotica-hello
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.5/robotica-hello-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: master
     created: "2021-06-26T00:33:30.74078848Z"
     description: Login host for robotica
     digest: ee750c361a405c247c2a260f143fde3539e405e3a0e126192c1aad82cf89b1ac
@@ -864,6 +954,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.1/robotica-hello-0.0.1.tgz
     version: 0.0.1
   scrooge:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-08T23:04:46.741425012Z"
+    description: Scrooge database
+    digest: 58c93d7ca36ca293cea506528685f0da234493ee96973ddea1d2b7f7f9efd67c
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.9/scrooge-0.0.9.tgz
+    version: 0.0.9
   - apiVersion: v2
     appVersion: master
     created: "2021-06-30T21:35:15.09305025Z"
@@ -935,6 +1035,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/scrooge-0.0.1/scrooge-0.0.1.tgz
     version: 0.0.1
   service:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2021-09-08T23:04:46.880377554Z"
+    description: A Kubernetes Service/Ingress
+    digest: c8f99b99df979a9d14f8b5e68d9c459ee396fa3af6d1a7e87a041e0a02512f70
+    name: service
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/service-0.0.8/service-0.0.8.tgz
+    version: 0.0.8
   - apiVersion: v2
     appVersion: 0.0.0
     created: "2021-01-04T09:32:37.91934017Z"
@@ -1016,6 +1126,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/service-0.0.0/service-0.0.0.tgz
     version: 0.0.0
   teslamate:
+  - apiVersion: v2
+    appVersion: 1.24.0
+    created: "2021-09-08T23:04:47.026870541Z"
+    description: Teslamate helm chart
+    digest: b2b0c282f7c98c4e543c67e9173c03eff95ee576ef0e2856f2f8ca573bc6df66
+    name: teslamate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-0.0.9/teslamate-0.0.9.tgz
+    version: 0.0.9
   - apiVersion: v2
     appVersion: 1.24.0
     created: "2021-09-01T22:12:31.289601116Z"
@@ -1109,6 +1229,16 @@ entries:
   teslamate-grafana:
   - apiVersion: v2
     appVersion: 1.24.0
+    created: "2021-09-08T23:04:47.172990226Z"
+    description: Teslamate grafana helm chart
+    digest: 9dd633d4499eb8abb752fb7a7c65fe7c8a5d93f19dc648070db1c05e0674735f
+    name: teslamate-grafana
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.8/teslamate-grafana-0.0.8.tgz
+    version: 0.0.8
+  - apiVersion: v2
+    appVersion: 1.24.0
     created: "2021-09-01T22:12:31.455321928Z"
     description: Teslamate grafana helm chart
     digest: cec8d26a6573b55655f89557d302bc371ebfdb26950133af77c087cbce6938f4
@@ -1187,4 +1317,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-09-08T22:26:33.914410261Z"
+generated: "2021-09-08T23:04:47.173410429Z"
