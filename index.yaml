@@ -44,6 +44,20 @@ entries:
     version: 0.0.0
   cert-manager:
   - apiVersion: v2
+    appVersion: 1.5.3
+    created: "2021-09-08T22:26:33.554940962Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.5.3
+    description: cert-manager deployment
+    digest: a36d236917c43bdaefe5be883c386184aa5b2c7e3ba4c15324b9fd03618b4121
+    name: cert-manager
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/cert-manager-1.5.3/cert-manager-1.5.3.tgz
+    version: 1.5.3
+  - apiVersion: v2
     appVersion: 1.5.1
     created: "2021-08-18T00:26:20.636623755Z"
     dependencies:
@@ -188,6 +202,20 @@ entries:
   kube-prometheus-stack:
   - apiVersion: v2
     appVersion: 0.50.0
+    created: "2021-09-08T22:26:33.667376326Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 18.0.5
+    description: kube-prometheus-stack deployment
+    digest: 87158c175e6d2a9c24912c5392cc876105a064a49c03b00ef2e4b128fe08ef65
+    name: kube-prometheus-stack
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/kube-prometheus-stack-18.0.5/kube-prometheus-stack-18.0.5.tgz
+    version: 18.0.5
+  - apiVersion: v2
+    appVersion: 0.50.0
     created: "2021-08-18T00:26:20.861408442Z"
     dependencies:
     - name: kube-prometheus-stack
@@ -236,6 +264,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/linuxpenguins-website-0.0.0/linuxpenguins-website-0.0.0.tgz
     version: 0.0.0
   metallb:
+  - apiVersion: v2
+    appVersion: 0.10.2
+    created: "2021-09-08T22:26:33.747906846Z"
+    dependencies:
+    - name: metallb
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.5.4
+    description: metallb deployment
+    digest: 046ab7b673e54aa573f4b0bd40034717aafc46030ae39a6965f876ef52d7715e
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metallb-2.5.4/metallb-2.5.4.tgz
+    version: 2.5.4
   - apiVersion: v2
     appVersion: 0.10.2
     created: "2021-08-18T00:35:02.027752491Z"
@@ -293,6 +335,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/metallb-2.3.5-brian.1/metallb-2.3.5-brian.1.tgz
     version: 2.3.5-brian.1
   metrics-server:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2021-09-08T22:26:33.830041988Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.9.3
+    description: metrics-server deployment
+    digest: 8c5eb30a45654445b49c94cc8f8c63e23f35b5b59e8fef68a24b0687e59fd6c3
+    name: metrics-server
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metrics-server-5.9.3/metrics-server-5.9.3.tgz
+    version: 5.9.3
   - apiVersion: v2
     appVersion: 0.5.0
     created: "2021-08-18T00:35:02.240200142Z"
@@ -436,6 +492,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/node-red-7.2.0-brian.1/node-red-7.2.0-brian.1.tgz
     version: 7.2.0-brian.1
   owncloud:
+  - apiVersion: v2
+    appVersion: 10.8.0
+    created: "2021-09-08T22:26:33.914228759Z"
+    dependencies:
+    - name: owncloud
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.23
+    description: owncloud deployment
+    digest: e86d045a72c7ef9a756400dbec857de0d9d7702ac9f2cc368603d7aa3da6417a
+    name: owncloud
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/owncloud-10.2.23/owncloud-10.2.23.tgz
+    version: 10.2.23
   - apiVersion: v2
     appVersion: 10.8.0
     created: "2021-08-18T00:35:02.504689095Z"
@@ -1117,4 +1187,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-09-01T22:12:31.45550543Z"
+generated: "2021-09-08T22:26:33.914410261Z"
