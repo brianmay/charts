@@ -7,6 +7,7 @@ ingress:
   annotations: {}
   rules: []
   tls: []
+  ingressClassName: ~
 
 certificate:
   enabled: false
