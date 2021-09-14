@@ -591,6 +591,16 @@ entries:
   penguin-memories:
   - apiVersion: v2
     appVersion: main
+    created: "2021-09-14T03:12:10.912881978Z"
+    description: Photo database
+    digest: a6c270ecb71c2cf12c8c9baca4ac27fb3038ef7889a242868aa82a0a10e29ea9
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.9/penguin-memories-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: main
     created: "2021-09-08T23:04:45.982043412Z"
     description: Photo database
     digest: 23c8f27c30e0bd7e7b5cd3ab7fbe625b65e145b565e06f34d85eb36efae1c453
@@ -670,6 +680,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.1/penguin-memories-0.0.1.tgz
     version: 0.0.1
   phonedb:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-14T03:12:11.075784257Z"
+    description: Phone calls database
+    digest: 81de050d324fb77c8e234c633172f4140f7ebd23f8620605d7041bc07ab52672
+    name: phonedb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/phonedb-0.0.9/phonedb-0.0.9.tgz
+    version: 0.0.9
   - apiVersion: v2
     appVersion: master
     created: "2021-09-08T23:04:46.139347865Z"
@@ -824,6 +844,16 @@ entries:
   robotica-docker:
   - apiVersion: v2
     appVersion: master
+    created: "2021-09-14T03:12:11.242412342Z"
+    description: Main deploy for robotica
+    digest: 638ce0705f870b3e0d5af4eb47c49bd3ae7eb849327d06bc413b8bbf84816227
+    name: robotica-docker
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-docker-0.0.9/robotica-docker-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: master
     created: "2021-09-08T23:04:46.433685648Z"
     description: Main deploy for robotica
     digest: 84051671ab8eed5153055c79700910dd0f93607074ccd077adca9291495732c6
@@ -905,6 +935,16 @@ entries:
   robotica-hello:
   - apiVersion: v2
     appVersion: master
+    created: "2021-09-14T03:12:11.38768419Z"
+    description: Login host for robotica
+    digest: fde32862d5c83bbc7ca6c16cac8f0a5a6594b3fad719edd64a5270acee801582
+    name: robotica-hello
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.6/robotica-hello-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: master
     created: "2021-09-08T23:04:46.599234651Z"
     description: Login host for robotica
     digest: f8c55d81cc41acc4ce45cea2b6cf5d3d3c32f78d7e70472baba192db4c8f0144
@@ -954,6 +994,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.1/robotica-hello-0.0.1.tgz
     version: 0.0.1
   scrooge:
+  - apiVersion: v2
+    appVersion: master
+    created: "2021-09-14T03:12:11.553581874Z"
+    description: Scrooge database
+    digest: 83e7d31f77767c9145429895f73c416f3b0c8a644fbdf0777ac5a708640474af
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.10/scrooge-0.0.10.tgz
+    version: 0.0.10
   - apiVersion: v2
     appVersion: master
     created: "2021-09-08T23:04:46.741425012Z"
@@ -1126,6 +1176,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/service-0.0.0/service-0.0.0.tgz
     version: 0.0.0
   teslamate:
+  - apiVersion: v2
+    appVersion: 1.24.0
+    created: "2021-09-14T03:12:11.733186681Z"
+    description: Teslamate helm chart
+    digest: 1ea9fc3d359dc00894841fdd5c2c0e3198b92b5d242b0743f36b197322ae5ad1
+    name: teslamate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-0.0.10/teslamate-0.0.10.tgz
+    version: 0.0.10
   - apiVersion: v2
     appVersion: 1.24.0
     created: "2021-09-08T23:04:47.026870541Z"
@@ -1317,4 +1377,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-09-08T23:04:47.173410429Z"
+generated: "2021-09-14T03:12:11.733550482Z"
