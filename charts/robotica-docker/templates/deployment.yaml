@@ -47,11 +47,11 @@ spec:
             httpGet:
               path: /
               port: 4000
-            initialDelaySeconds: 60
-          readinessProbe:
+          startupProbe:
             httpGet:
               path: /
               port: 4000
+            failureThreshold: 120
           env:
           - name: NAMESPACE
             valueFrom:
