@@ -216,6 +216,29 @@ entries:
     version: 3.29.0
   keel:
   - apiVersion: v1
+    appVersion: 0.17.0-rc1
+    created: "2021-09-20T22:14:36.533754087Z"
+    description: Open source, tool for automating Kubernetes deployment updates. Keel
+      is stateless, robust and lightweight.
+    digest: c7b038cd98c3d54199d8e42616625cfe68d151fe5ecda714e81f784217221c8a
+    home: https://keel.sh
+    icon: https://raw.githubusercontent.com/keel-hq/keel/master/static/keel-logo.png
+    keywords:
+    - kubernetes deployment
+    - helm release
+    - continuous deployment
+    maintainers:
+    - email: rmocius@gmail.com
+      name: rimusz
+    - email: karolis.rusenas@gmail.com
+      name: rusenask
+    name: keel
+    sources:
+    - https://github.com/keel-hq/keel
+    urls:
+    - https://github.com/brianmay/charts/releases/download/keel-0.9.11/keel-0.9.11.tgz
+    version: 0.9.11
+  - apiVersion: v1
     appVersion: 0.16.1
     created: "2021-09-16T22:07:08.215026369Z"
     description: Open source, tool for automating Kubernetes deployment updates. Keel
@@ -1400,4 +1423,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-09-16T22:07:08.215547896Z"
+generated: "2021-09-20T22:14:36.534252687Z"
