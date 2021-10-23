@@ -100,3 +100,10 @@ mqtt:
   user_name: nil
   password: nil
   cacert: nil
+
+oidc:
+  disocvery_url: nil
+  client_id: nil
+  client_secret: nil
+  client_url: nil
+  client_scope: "openid profile groups"
