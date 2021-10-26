@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "dex.fullname" $ }}
+  labels:
+    {{- include "dex.selectorLabels" $ | nindent 4 }}
+    {{- include "dex.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "dex.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}

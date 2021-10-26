@@ -14,7 +14,11 @@ serviceAccount:
   create: true
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name:
+  name: ""
+
+deploymentAnnotations: {}
+
+podAnnotations: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
@@ -50,6 +54,7 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+  ingressClassName: ~
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -62,6 +67,16 @@ resources: {}
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
+
+podDisruptionBudget:
+  minAvailable: 1
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
 
 nodeSelector: {}
 
