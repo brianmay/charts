@@ -153,6 +153,26 @@ entries:
   dex:
   - apiVersion: v2
     appVersion: v2.30.0
+    created: "2021-10-26T02:57:21.469400141Z"
+    description: OpenID Connect Identity (OIDC) and OAuth 2.0 Provider with Pluggable
+      Connectors
+    digest: dce85324d3cd2ea90ca8a8f5f88eb20953cc812044559dca8f4dfe0bbcf96aea
+    home: https://github.com/dexidp/dex
+    icon: https://raw.githubusercontent.com/dexidp/dex/master/Documentation/logos/dex-horizontal-color.png
+    keywords:
+    - authentication
+    - idp
+    - oidc
+    maintainers:
+    - email: gabibbo97@gmail.com
+      name: gabibbo97
+    name: dex
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/dex-4.0.5/dex-4.0.5.tgz
+    version: 4.0.5
+  - apiVersion: v2
+    appVersion: v2.30.0
     created: "2021-10-22T03:13:32.794655649Z"
     description: OpenID Connect Identity (OIDC) and OAuth 2.0 Provider with Pluggable
       Connectors
@@ -1454,4 +1474,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-23T06:57:20.512320691Z"
+generated: "2021-10-26T02:57:21.469957053Z"
