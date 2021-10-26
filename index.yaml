@@ -1083,6 +1083,16 @@ entries:
   scrooge:
   - apiVersion: v2
     appVersion: master
+    created: "2021-10-26T02:58:32.858814758Z"
+    description: Scrooge database
+    digest: e770694be344a9856d8837d384769de8444aa7b724b43d411b40057ee1a80fd4
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.12/scrooge-0.0.12.tgz
+    version: 0.0.12
+  - apiVersion: v2
+    appVersion: master
     created: "2021-10-23T06:57:20.511974187Z"
     description: Scrooge database
     digest: 118bc82a276521278fea956e0a061872af56852a17047ba92ad5d4b164276254
@@ -1474,4 +1484,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-26T02:57:21.469957053Z"
+generated: "2021-10-26T02:58:32.859026159Z"
