@@ -85,25 +85,25 @@ tolerations: []
 affinity: {}
 
 # Base.url_encode64(:crypto.strong_rand_bytes(40))
-elixir_cookie: nil
+elixir_cookie: ~
 
 scrooge:
-  http_host: nil
-  database_url: nil
-  guardian_secret: nil
-  secret_key_base: nil
-  signing_salt: nil
+  http_host: ~
+  database_url: ~
+  guardian_secret: ~
+  secret_key_base: ~
+  signing_salt: ~
 
 mqtt:
-  host: nil
-  port: nil
-  user_name: nil
-  password: nil
-  cacert: nil
+  host: ~
+  port: ~
+  user_name: ~
+  password: ~
+  cacert: ~
 
 oidc:
-  disocvery_url: nil
-  client_id: nil
-  client_secret: nil
-  client_url: nil
+  discovery_url: ~
+  client_id: ~
+  client_secret: ~
+  client_url: ~
   client_scope: "openid profile groups"
