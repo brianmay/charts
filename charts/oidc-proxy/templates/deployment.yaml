@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "oidc-proxy.fullname" . }}
+  labels:
+    {{- include "oidc-proxy.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "oidc-proxy.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "oidc-proxy.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "oidc-proxy.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          env:
+          - name: OIDC_SESSION_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "oidc-proxy.fullname" . }}
+                key:  OIDC_SESSION_SECRET
+          - name: OIDC_SESSION_CHECK_SSI
+            value: "{{ .Values.session.check_ssi }}"
+          - name: OIDC_SESSION_NAME
+            value: "{{ .Values.session.name }}"
+          - name: OIDC_DISCOVERY
+            value: "{{ .Values.oidc.discovery_url }}"
+          - name: OIDC_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "oidc-proxy.fullname" . }}
+                key: OIDC_CLIENT_ID
+          - name: OIDC_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "oidc-proxy.fullname" . }}
+                key: OIDC_CLIENT_SECRET
+          - name: OIDC_CLIENT_SCOPE
+            value: "{{ .Values.oidc.client_scope }}"
+          - name: PROXY_HOST
+            value: "{{ .Values.proxy.host }}"
+          - name: PROXY_PORT
+            value: "{{ .Values.proxy.port }}"
+          - name: PROXY_PROTOCOL
+            value: "{{ .Values.proxy.protocol }}"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

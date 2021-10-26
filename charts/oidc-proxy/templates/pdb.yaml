@@ -1,0 +1,14 @@
+{{- with .Values.podDisruptionBudget }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "oidc-proxy.fullname" $ }}
+  labels:
+    {{- include "oidc-proxy.selectorLabels" $ | nindent 4 }}
+    {{- include "oidc-proxy.labels" $ | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "oidc-proxy.selectorLabels" $ | nindent 6 }}
+  {{- toYaml . | nindent 2 }}
+{{- end }}
