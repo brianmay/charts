@@ -618,6 +618,17 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/node-red-7.2.0-brian.1/node-red-7.2.0-brian.1.tgz
     version: 7.2.0-brian.1
+  oidc-proxy:
+  - apiVersion: v2
+    appVersion: sha-180d472ea14952665e369aa2abe0f9d9a65f992b
+    created: "2021-10-26T03:14:38.884360441Z"
+    description: A Helm chart for Kubernetes
+    digest: 6b2ed488f43e40ac637c2f9b8567dd418ce4c492b539d2961ec62a6344103eeb
+    name: oidc-proxy
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/oidc-proxy-0.0.0/oidc-proxy-0.0.0.tgz
+    version: 0.0.0
   owncloud:
   - apiVersion: v2
     appVersion: 10.8.0
@@ -1484,4 +1495,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-26T02:58:32.859026159Z"
+generated: "2021-10-26T03:14:38.884610054Z"
