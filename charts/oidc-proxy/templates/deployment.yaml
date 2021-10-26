@@ -70,6 +70,8 @@ spec:
                 key: OIDC_CLIENT_SECRET
           - name: OIDC_CLIENT_SCOPE
             value: "{{ .Values.oidc.client_scope }}"
+          - name: OIDC_GROUP
+            value: "{{ .Values.oidc.group }}"
           - name: PROXY_HOST
             value: "{{ .Values.proxy.host }}"
           - name: PROXY_PORT

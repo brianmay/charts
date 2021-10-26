@@ -92,6 +92,7 @@ oidc:
   client_secret: ~
   client_url: ~
   client_scope: "openid groups"
+  group: ~
 
 proxy:
   host: ~
