@@ -68,8 +68,8 @@ spec:
               secretKeyRef:
                 name: {{ include "oidc-proxy.fullname" . }}
                 key: OIDC_CLIENT_SECRET
-          - name: OIDC_CLIENT_SCOPE
-            value: "{{ .Values.oidc.client_scope }}"
+          - name: OIDC_AUTH_SCOPE
+            value: "{{ .Values.oidc.auth_scope }}"
           - name: OIDC_GROUP
             value: "{{ .Values.oidc.group }}"
           - name: PROXY_HOST

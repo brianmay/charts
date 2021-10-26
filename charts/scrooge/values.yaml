@@ -106,4 +106,4 @@ oidc:
   client_id: ~
   client_secret: ~
   client_url: ~
-  client_scope: "openid profile groups"
+  auth_scope: "openid profile groups"

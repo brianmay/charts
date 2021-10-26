@@ -114,8 +114,8 @@ spec:
                 key: OIDC_CLIENT_SECRET
           - name: OIDC_CLIENT_URL
             value: "{{ .Values.oidc.client_url }}"
-          - name: OIDC_CLIENT_SCOPE
-            value: "{{ .Values.oidc.client_scope }}"
+          - name: OIDC_AUTH_SCOPE
+            value: "{{ .Values.oidc.auth_scope }}"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
