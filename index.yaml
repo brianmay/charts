@@ -621,6 +621,16 @@ entries:
   oidc-proxy:
   - apiVersion: v2
     appVersion: sha-180d472ea14952665e369aa2abe0f9d9a65f992b
+    created: "2021-10-26T05:04:57.784112616Z"
+    description: A Helm chart for Kubernetes
+    digest: f015d5aa79ec1b367e2531a749a647c63347d1026ad858137262fa69b573ea56
+    name: oidc-proxy
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/oidc-proxy-0.0.3/oidc-proxy-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: sha-180d472ea14952665e369aa2abe0f9d9a65f992b
     created: "2021-10-26T04:52:00.406600417Z"
     description: A Helm chart for Kubernetes
     digest: 5f03e92609a74cea4e20255caf218cf91bdab5d49dcadf6817d713e2f0f615ec
@@ -1114,6 +1124,16 @@ entries:
   scrooge:
   - apiVersion: v2
     appVersion: master
+    created: "2021-10-26T05:04:57.952422658Z"
+    description: Scrooge database
+    digest: e895f461466d61614999139db0368f6b6c061c16fddc5625b2e1ebf1bb115d67
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.13/scrooge-0.0.13.tgz
+    version: 0.0.13
+  - apiVersion: v2
+    appVersion: master
     created: "2021-10-26T02:58:32.858814758Z"
     description: Scrooge database
     digest: e770694be344a9856d8837d384769de8444aa7b724b43d411b40057ee1a80fd4
@@ -1515,4 +1535,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-26T04:52:00.406902915Z"
+generated: "2021-10-26T05:04:57.952937474Z"
