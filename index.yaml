@@ -1084,6 +1084,16 @@ entries:
   robotica-docker:
   - apiVersion: v2
     appVersion: master
+    created: "2021-10-30T07:46:52.173413678Z"
+    description: Main deploy for robotica
+    digest: 01fbdf5697745bd08ddd35651b1b9efcd2e9cb089ecf27edb5511101352d3ada
+    name: robotica-docker
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/robotica-docker-0.0.10/robotica-docker-0.0.10.tgz
+    version: 0.0.10
+  - apiVersion: v2
+    appVersion: master
     created: "2021-09-14T03:12:11.242412342Z"
     description: Main deploy for robotica
     digest: 638ce0705f870b3e0d5af4eb47c49bd3ae7eb849327d06bc413b8bbf84816227
@@ -1647,4 +1657,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-30T04:02:00.66274683Z"
+generated: "2021-10-30T07:46:52.173773882Z"
