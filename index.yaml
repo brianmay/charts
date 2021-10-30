@@ -505,6 +505,20 @@ entries:
     version: 2.3.5-brian.1
   metrics-server:
   - apiVersion: v2
+    appVersion: 0.5.1
+    created: "2021-10-30T02:58:43.962870214Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.10.7
+    description: metrics-server deployment
+    digest: 702cbe997bf03559f57436518be791e0765e77470412d0b1464e061c828a9dd7
+    name: metrics-server
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metrics-server-5.10.7/metrics-server-5.10.7.tgz
+    version: 5.10.7
+  - apiVersion: v2
     appVersion: 0.5.0
     created: "2021-09-08T22:26:33.830041988Z"
     dependencies:
@@ -1591,4 +1605,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-30T02:54:37.966999823Z"
+generated: "2021-10-30T02:58:43.963187123Z"
