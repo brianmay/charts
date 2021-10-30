@@ -228,6 +228,20 @@ entries:
     version: 0.0.0
   ingress-nginx-int:
   - apiVersion: v2
+    appVersion: 1.0.4
+    created: "2021-10-30T04:02:00.661641696Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.0.6
+    description: ingress-nginx-int deployment
+    digest: ba96c122121b9bd3666f2d875ad9e1bb3cac718b9d9aafde5281d991902fd3e2
+    name: ingress-nginx-int
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/ingress-nginx-int-4.0.6/ingress-nginx-int-4.0.6.tgz
+    version: 4.0.6
+  - apiVersion: v2
     appVersion: 0.48.1
     created: "2021-08-18T00:26:20.73942857Z"
     dependencies:
@@ -1633,4 +1647,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-30T03:12:24.493850678Z"
+generated: "2021-10-30T04:02:00.66274683Z"
