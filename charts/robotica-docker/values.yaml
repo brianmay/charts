@@ -93,3 +93,9 @@ robotica:
   login_secret: nil
   signing_salt: nil
   instances: []
+
+oidc:
+  discovery_url: ~
+  client_id: ~
+  client_secret: ~
+  auth_scope: "openid profile groups"
