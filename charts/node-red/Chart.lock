@@ -1,6 +1,6 @@
 dependencies:
 - name: node-red
   repository: https://k8s-at-home.com/charts/
-  version: 9.0.0
-digest: sha256:611cbb14291e798e9d17ba02a5163de8ecb6903174a2ea9f883fc9e5c35bf4b0
-generated: "2021-08-18T08:30:45.691229344+10:00"
+  version: 9.0.1
+digest: sha256:601077dc1563a5ab6a74dedf0280c1f49565e7e72c5c8ba2a818b2f736671215
+generated: "2021-10-30T14:08:49.91247792+11:00"
