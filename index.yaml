@@ -333,6 +333,20 @@ entries:
   kube-prometheus-stack:
   - apiVersion: v2
     appVersion: 0.50.0
+    created: "2021-10-30T02:51:04.428006172Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 19.2.2
+    description: kube-prometheus-stack deployment
+    digest: 21052993704d9a68d8327c85df3a023c0a9c8581602d376798d4653cfe6aef34
+    name: kube-prometheus-stack
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/kube-prometheus-stack-19.2.2/kube-prometheus-stack-19.2.2.tgz
+    version: 19.2.2
+  - apiVersion: v2
+    appVersion: 0.50.0
     created: "2021-09-08T22:26:33.667376326Z"
     dependencies:
     - name: kube-prometheus-stack
@@ -1563,4 +1577,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-30T02:47:22.621372888Z"
+generated: "2021-10-30T02:51:04.428289178Z"
