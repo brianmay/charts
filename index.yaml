@@ -662,6 +662,20 @@ entries:
   owncloud:
   - apiVersion: v2
     appVersion: 10.8.0
+    created: "2021-10-30T02:36:38.449140236Z"
+    dependencies:
+    - name: owncloud
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.30
+    description: owncloud deployment
+    digest: 4b774f902beaf8c71a0a2745bf9b58a3521931e4259ab5ad1a52a473ef1a7764
+    name: owncloud
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/owncloud-10.2.30/owncloud-10.2.30.tgz
+    version: 10.2.30
+  - apiVersion: v2
+    appVersion: 10.8.0
     created: "2021-09-08T22:26:33.914228759Z"
     dependencies:
     - name: owncloud
@@ -1535,4 +1549,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-10-26T05:04:57.952937474Z"
+generated: "2021-10-30T02:36:38.449550245Z"
