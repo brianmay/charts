@@ -88,11 +88,12 @@ affinity: {}
 elixir_cookie: nil
 
 robotica:
-  database_url: nil
-  secret_key_base: nil
-  login_secret: nil
-  signing_salt: nil
-  instances: []
+  hostname: ~
+  http_url: ~
+  database_url: ~
+  secret_key_base: ~
+  login_secret: ~
+  signing_salt: ~
 
 oidc:
   discovery_url: ~

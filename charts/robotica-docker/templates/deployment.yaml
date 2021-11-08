@@ -92,8 +92,10 @@ spec:
             value: "/etc/robotica/sequences.yaml"
           - name: ROBOTICA_SCENES
             value: "/etc/robotica/scenes.yaml"
-          - name: HTTP_HOST
-            value: "{{ .Values.robotica.http_host }}"
+          - name: HOSTNAME
+            value: "{{ .Values.robotica.hostname }}"
+          - name: HTTP_URL
+            value: "{{ .Values.robotica.http_url }}"
           - name: OIDC_DISCOVERY_URL
             value: "{{ .Values.oidc.discovery_url }}"
           - name: OIDC_CLIENT_ID
