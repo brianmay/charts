@@ -92,6 +92,8 @@ spec:
                 key: MQTT_PASSWORD
           - name: HTTP_HOST
             value: "{{ .Values.scrooge.http_host }}"
+          - name: HTTP_URL
+            value: "{{ .Values.scrooge.http_url }}"
           - name: MQTT_HOST
             value: "{{ .Values.mqtt.host }}"
           - name: MQTT_PORT

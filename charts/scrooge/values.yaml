@@ -89,6 +89,7 @@ elixir_cookie: ~
 
 scrooge:
   http_host: ~
+  http_url: ~
   database_url: ~
   guardian_secret: ~
   secret_key_base: ~
