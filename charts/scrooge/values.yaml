@@ -88,7 +88,6 @@ affinity: {}
 elixir_cookie: ~
 
 scrooge:
-  http_host: ~
   http_url: ~
   database_url: ~
   guardian_secret: ~
@@ -106,5 +105,4 @@ oidc:
   discovery_url: ~
   client_id: ~
   client_secret: ~
-  client_url: ~
   auth_scope: "openid profile groups"
