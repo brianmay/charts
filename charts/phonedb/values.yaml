@@ -88,14 +88,23 @@ affinity: {}
 elixir_cookie: nil
 
 phonedb:
-  http_host: nil
-  database_url: nil
-  guardian_secret: nil
-  secret_key_base: nil
-  signing_salt: nil
+  http_host: ~
+  http_url: ~
+  database_url: ~
+  guardian_secret: ~
+  secret_key_base: ~
+  signing_salt: ~
+  phone_username: ~
+  phone_password: ~
 
 ldap:
   server: nil
   base_dn: nil
   user_name: nil
   password: nil
+
+oidc:
+  discovery_url: ~
+  client_id: ~
+  client_secret: ~
+  auth_scope: "openid profile groups"

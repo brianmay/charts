@@ -88,12 +88,38 @@ spec:
                 key: LDAP_PASSWORD
           - name: HTTP_HOST
             value: "{{ .Values.phonedb.http_host }}"
+          - name: HTTP_URL
+            value: "{{ .Values.phonedb.http_url }}"
           - name: LDAP_SERVER
             value: "{{ .Values.ldap.server }}"
           - name: LDAP_BASE_DN
             value: "{{ .Values.ldap.base_dn }}"
           - name: LDAP_USERNAME
             value: "{{ .Values.ldap.user_name }}"
+          - name: PHONE_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "phonedb.fullname" . }}
+                key: PHONE_USERNAME
+          - name: PHONE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "phonedb.fullname" . }}
+                key: PHONE_WORD
+          - name: OIDC_DISCOVERY_URL
+            value: "{{ .Values.oidc.discovery_url }}"
+          - name: OIDC_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "phonedb.fullname" . }}
+                key: OIDC_CLIENT_ID
+          - name: OIDC_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "phonedb.fullname" . }}
+                key: OIDC_CLIENT_SECRET
+          - name: OIDC_AUTH_SCOPE
+            value: "{{ .Values.oidc.auth_scope }}"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
