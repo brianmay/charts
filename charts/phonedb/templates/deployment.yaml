@@ -86,8 +86,6 @@ spec:
               secretKeyRef:
                 name: {{ include "phonedb.fullname" . }}
                 key: LDAP_PASSWORD
-          - name: HTTP_HOST
-            value: "{{ .Values.phonedb.http_host }}"
           - name: HTTP_URL
             value: "{{ .Values.phonedb.http_url }}"
           - name: LDAP_SERVER

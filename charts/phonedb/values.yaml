@@ -88,7 +88,6 @@ affinity: {}
 elixir_cookie: nil
 
 phonedb:
-  http_host: ~
   http_url: ~
   database_url: ~
   guardian_secret: ~
