@@ -105,7 +105,7 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: {{ include "phonedb.fullname" . }}
-                key: PHONE_WORD
+                key: PHONE_PASSWORD
           - name: OIDC_DISCOVERY_URL
             value: "{{ .Values.oidc.discovery_url }}"
           - name: OIDC_CLIENT_ID
