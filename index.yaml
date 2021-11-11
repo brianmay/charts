@@ -932,6 +932,16 @@ entries:
   phonedb:
   - apiVersion: v2
     appVersion: master
+    created: "2021-11-11T03:10:44.730676815Z"
+    description: Phone calls database
+    digest: f891bd896cca46fdfc5a5631371af214b1dca0ce911e8651ce76a3935d50e76d
+    name: phonedb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/phonedb-0.0.10/phonedb-0.0.10.tgz
+    version: 0.0.10
+  - apiVersion: v2
+    appVersion: master
     created: "2021-09-14T03:12:11.075784257Z"
     description: Phone calls database
     digest: 81de050d324fb77c8e234c633172f4140f7ebd23f8620605d7041bc07ab52672
@@ -1717,4 +1727,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-11-09T22:49:52.859990119Z"
+generated: "2021-11-11T03:10:44.732714242Z"
