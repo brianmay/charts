@@ -841,6 +841,16 @@ entries:
   penguin-memories:
   - apiVersion: v2
     appVersion: main
+    created: "2021-11-12T05:26:19.450058451Z"
+    description: Photo database
+    digest: a3a144c73839dc60b6e5c60877763dbe388a44ab6f03efdbfe3a577ca0f3b940
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.11/penguin-memories-0.0.11.tgz
+    version: 0.0.11
+  - apiVersion: v2
+    appVersion: main
     created: "2021-11-12T04:40:55.903649462Z"
     description: Photo database
     digest: 41f32794016151ac781d7ceba13934f2c8c94e8195e90ba28ccdcd37e1681b31
@@ -1757,4 +1767,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-11-12T04:40:55.904085868Z"
+generated: "2021-11-12T05:26:19.450460253Z"
