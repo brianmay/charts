@@ -94,7 +94,6 @@ pm:
   guardian_secret: ~
   secret_key_base: ~
   signing_salt: ~
-  http_host: ~
   http_url: ~
 
 oidc:

@@ -86,8 +86,6 @@ spec:
                 key: SIGNING_SALT
           - name: IMAGE_DIR
             value: "/opt/images"
-          - name: HTTP_HOST
-            value: {{  .Values.pm.http_host }}
           - name: HTTP_URL
             value: "{{ .Values.pm.http_url }}"
           - name: OIDC_DISCOVERY_URL
