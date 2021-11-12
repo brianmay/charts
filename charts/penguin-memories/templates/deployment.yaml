@@ -88,6 +88,22 @@ spec:
             value: "/opt/images"
           - name: HTTP_HOST
             value: {{  .Values.pm.http_host }}
+          - name: HTTP_URL
+            value: "{{ .Values.pm.http_url }}"
+          - name: OIDC_DISCOVERY_URL
+            value: "{{ .Values.oidc.discovery_url }}"
+          - name: OIDC_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-memories.fullname" . }}
+                key: OIDC_CLIENT_ID
+          - name: OIDC_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-memories.fullname" . }}
+                key: OIDC_CLIENT_SECRET
+          - name: OIDC_AUTH_SCOPE
+            value: "{{ .Values.oidc.auth_scope }}"
           volumeMounts:
           - name: images
             mountPath: "/opt/images"

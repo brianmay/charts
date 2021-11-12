@@ -89,10 +89,16 @@ elixir_cookie: nil
 
 volume: {}
 
-
 pm:
-  database_url: nil
-  guardian_secret: nil
-  secret_key_base: nil
-  signing_salt: nil
-  http_host: nil
+  database_url: ~
+  guardian_secret: ~
+  secret_key_base: ~
+  signing_salt: ~
+  http_host: ~
+  http_url: ~
+
+oidc:
+  discovery_url: ~
+  client_id: ~
+  client_secret: ~
+  auth_scope: "openid profile groups"
