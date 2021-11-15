@@ -719,6 +719,16 @@ entries:
   oidc-proxy:
   - apiVersion: v2
     appVersion: sha-0acd41cd6c4dde5189e92afa6e9b3405b7763b04
+    created: "2021-11-15T04:06:02.641871833Z"
+    description: A Helm chart for Kubernetes
+    digest: 86764532294093e8427fdd787a9a9b4201c3cb57f054e81bcf654c2d1796c615
+    name: oidc-proxy
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/oidc-proxy-0.0.5/oidc-proxy-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
+    appVersion: sha-0acd41cd6c4dde5189e92afa6e9b3405b7763b04
     created: "2021-11-04T20:57:43.115011002Z"
     description: A Helm chart for Kubernetes
     digest: 247342212a479e5fc0190a2acf809a7f211efb9c62f949718d6aacc66ddbc678
@@ -1767,4 +1777,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-11-12T05:26:19.450460253Z"
+generated: "2021-11-15T04:06:02.64408716Z"
