@@ -851,6 +851,16 @@ entries:
   penguin-memories:
   - apiVersion: v2
     appVersion: main
+    created: "2021-11-20T23:38:55.429833858Z"
+    description: Photo database
+    digest: 738d56580e9981d67ec2620416364fea5fed85aa3ae68a80b4a53106f99766ac
+    name: penguin-memories
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.12/penguin-memories-0.0.12.tgz
+    version: 0.0.12
+  - apiVersion: v2
+    appVersion: main
     created: "2021-11-12T05:26:19.450058451Z"
     description: Photo database
     digest: a3a144c73839dc60b6e5c60877763dbe388a44ab6f03efdbfe3a577ca0f3b940
@@ -960,6 +970,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/penguin-memories-0.0.1/penguin-memories-0.0.1.tgz
     version: 0.0.1
   phonedb:
+  - apiVersion: v2
+    appVersion: main
+    created: "2021-11-20T23:38:55.535417524Z"
+    description: Phone calls database
+    digest: 55c83ea156593eab057f6e6561803ec3fb58d97577dd7ac0ab0cc97bc3714221
+    name: phonedb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/phonedb-0.0.13/phonedb-0.0.13.tgz
+    version: 0.0.13
   - apiVersion: v2
     appVersion: main
     created: "2021-11-11T05:04:41.672431394Z"
@@ -1334,6 +1354,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.1/robotica-hello-0.0.1.tgz
     version: 0.0.1
   scrooge:
+  - apiVersion: v2
+    appVersion: main
+    created: "2021-11-20T23:38:55.641141692Z"
+    description: Scrooge database
+    digest: 3ca6e5d3d1ec6fff8c66244fa947f54c8c8badc580a82d30586f85d32ab9cd50
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.17/scrooge-0.0.17.tgz
+    version: 0.0.17
   - apiVersion: v2
     appVersion: main
     created: "2021-11-09T22:49:52.859661716Z"
@@ -1777,4 +1807,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-11-15T04:06:02.64408716Z"
+generated: "2021-11-20T23:38:55.641589798Z"
