@@ -1,0 +1,130 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "penguin-nodes.fullname" . }}
+  labels:
+    {{- include "penguin-nodes.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.deploymentAnnotations | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "penguin-nodes.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "penguin-nodes.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "penguin-nodes.fullname" . }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "penguin-nodes.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 4000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 4000
+          startupProbe:
+            httpGet:
+              path: /
+              port: 4000
+            failureThreshold: 120
+          env:
+          - name: NAMESPACE
+            valueFrom:
+              fieldRef:
+               fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: KUBERNETES_SELECTOR
+            value: "app.kubernetes.io/instance={{ include "penguin-nodes.name" . }}"
+          - name: RELEASE_COOKIE
+            value: "{{ .Values.elixir_cookie }}"
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: DATABASE_URL
+          - name: GUARDIAN_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: GUARDIAN_SECRET
+          - name: SECRET_KEY_BASE
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: SECRET_KEY_BASE
+          - name: SIGNING_SALT
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: SIGNING_SALT
+          - name: IMAGE_DIR
+            value: "/opt/images"
+          - name: HTTP_URL
+            value: "{{ .Values.pn.http_url }}"
+          - name: MQTT_HOST
+            value: "{{ .Values.mqtt.host }}"
+          - name: MQTT_PORT
+            value: "{{ .Values.mqtt.port }}"
+          - name: MQTT_USER_NAME
+            value: "{{ .Values.mqtt.user_name }}"
+          - name: MQTT_CA_CERT_FILE
+            value: /etc/penguin-nodes/cacert.pem
+          - name: OIDC_DISCOVERY_URL
+            value: "{{ .Values.oidc.discovery_url }}"
+          - name: OIDC_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: OIDC_CLIENT_ID
+          - name: OIDC_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: OIDC_CLIENT_SECRET
+          - name: OIDC_AUTH_SCOPE
+            value: "{{ .Values.oidc.auth_scope }}"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - name: config-volume
+            mountPath: /etc/penguin-nodes
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
