@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: docker.io/brianmay/resume
+  repository: ghcr.io/brianmay/resume
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
