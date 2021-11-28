@@ -1166,6 +1166,16 @@ entries:
     version: 0.0.1
   postfix:
   - apiVersion: v2
+    appVersion: main
+    created: "2021-11-28T04:26:00.014095361Z"
+    description: A simple Postfix server
+    digest: 780b8c689249f289bf61bb8efc1f6ad337326465505dbf490e1959d226530b00
+    name: postfix
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/postfix-0.0.8/postfix-0.0.8.tgz
+    version: 0.0.8
+  - apiVersion: v2
     appVersion: sha-7a201d2
     created: "2021-09-08T23:04:46.283605439Z"
     description: A simple Postfix server
@@ -1881,4 +1891,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-11-28T02:35:58.171353048Z"
+generated: "2021-11-28T04:26:00.014570761Z"
