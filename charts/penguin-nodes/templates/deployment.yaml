@@ -87,6 +87,11 @@ spec:
                 key: SIGNING_SALT
           - name: IMAGE_DIR
             value: "/opt/images"
+          - name: MQTT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: MQTT_PASSWORD
           - name: HTTP_URL
             value: "{{ .Values.pn.http_url }}"
           - name: MQTT_HOST
