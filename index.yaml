@@ -1025,6 +1025,16 @@ entries:
   penguin-nodes:
   - apiVersion: v2
     appVersion: main
+    created: "2021-11-30T04:12:59.946099685Z"
+    description: Control IOT devices
+    digest: 1a51cfbc05fb4758d4d25c1c40e3c19100320707c721694867f90b9bbe33d6e9
+    name: penguin-nodes
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-nodes-0.0.3/penguin-nodes-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: main
     created: "2021-11-28T04:54:07.606622606Z"
     description: Control IOT devices
     digest: 726dd588f1bd356318bc79e7e6e113e1e1ef8d22ab9a46c86ef0416a85cebea1
@@ -1901,4 +1911,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2021-11-28T04:54:07.607053909Z"
+generated: "2021-11-30T04:12:59.946578107Z"
