@@ -99,9 +99,13 @@ pn:
 mqtt:
   host: ~
   port: ~
-  user_name: ~
+  username: ~
   password: ~
   cacert: ~
+
+life360:
+  username: ~
+  password: ~
 
 oidc:
   discovery_url: ~

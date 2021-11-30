@@ -99,7 +99,7 @@ spec:
           - name: MQTT_PORT
             value: "{{ .Values.mqtt.port }}"
           - name: MQTT_USER_NAME
-            value: "{{ .Values.mqtt.user_name }}"
+            value: "{{ .Values.mqtt.username }}"
           - name: MQTT_CA_CERT_FILE
             value: /etc/penguin-nodes/cacert.pem
           - name: OIDC_DISCOVERY_URL
@@ -116,6 +116,13 @@ spec:
                 key: OIDC_CLIENT_SECRET
           - name: OIDC_AUTH_SCOPE
             value: "{{ .Values.oidc.auth_scope }}"
+          - name: LIFE360_USERNAME
+            value: "{{ .Values.life360.username }}"
+          - name: LIFE360_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "penguin-nodes.fullname" . }}
+                key: LIFE360_PASSWORD
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
