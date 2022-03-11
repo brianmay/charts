@@ -4,7 +4,7 @@ description: node-red deployment
 
 type: application
 version: 10.0.0
-appVersion: 2.1.4
+appVersion: 2.1.5
 
 dependencies:
   - name: node-red
