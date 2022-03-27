@@ -100,6 +100,8 @@ spec:
             value: "{{ .Values.mqtt.port }}"
           - name: MQTT_USER_NAME
             value: "{{ .Values.mqtt.username }}"
+          - name: MQTT_USERNAME
+            value: "{{ .Values.mqtt.username }}"
           - name: MQTT_CA_CERT_FILE
             value: /etc/penguin-nodes/cacert.pem
           - name: OIDC_DISCOVERY_URL

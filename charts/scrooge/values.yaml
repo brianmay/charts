@@ -97,7 +97,7 @@ scrooge:
 mqtt:
   host: ~
   port: ~
-  user_name: ~
+  username: ~
   password: ~
   cacert: ~
 
