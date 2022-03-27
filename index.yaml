@@ -1138,6 +1138,16 @@ entries:
   penguin-nodes:
   - apiVersion: v2
     appVersion: main
+    created: "2022-03-27T06:02:57.778632432Z"
+    description: Control IOT devices
+    digest: 105ec100ca5ae3f9120f0c1f73b450b090fccacfb4b900fe1267ec69696fc257
+    name: penguin-nodes
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/penguin-nodes-0.0.4/penguin-nodes-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: main
     created: "2021-11-30T04:12:59.946099685Z"
     description: Control IOT devices
     digest: 1a51cfbc05fb4758d4d25c1c40e3c19100320707c721694867f90b9bbe33d6e9
@@ -1571,6 +1581,16 @@ entries:
     - https://github.com/brianmay/charts/releases/download/robotica-hello-0.0.1/robotica-hello-0.0.1.tgz
     version: 0.0.1
   scrooge:
+  - apiVersion: v2
+    appVersion: main
+    created: "2022-03-27T06:02:57.992761116Z"
+    description: Scrooge database
+    digest: 1737a613077224acc67e348515713284901a442bf71db1b99446f6dc0870a575
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.18/scrooge-0.0.18.tgz
+    version: 0.0.18
   - apiVersion: v2
     appVersion: main
     created: "2021-11-20T23:38:55.641141692Z"
@@ -2084,4 +2104,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-03-11T02:04:56.187844167Z"
+generated: "2022-03-27T06:02:57.993297625Z"
