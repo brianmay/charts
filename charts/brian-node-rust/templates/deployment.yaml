@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "brian-node-rust.fullname" . }}
+  labels:
+    {{- include "brian-node-rust.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.deploymentAnnotations | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "brian-node-rust.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "brian-node-rust.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "brian-node-rust.fullname" . }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "brian-node-rust.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 4000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 4000
+          startupProbe:
+            httpGet:
+              path: /
+              port: 4000
+          env:
+          - name: MQTT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "brian-node-rust.fullname" . }}
+                key: MQTT_PASSWORD
+          - name: MQTT_HOST
+            value: "{{ .Values.mqtt.host }}"
+          - name: MQTT_PORT
+            value: "{{ .Values.mqtt.port }}"
+          - name: MQTT_USERNAME
+            value: "{{ .Values.mqtt.username }}"
+          - name: MQTT_CA_CERT_FILE
+            value: /etc/brian-node-rust/cacert.pem
+          - name: LIFE360_USERNAME
+            value: "{{ .Values.life360.username }}"
+          - name: RUST_LOG
+            value: "{{ .Values.rust.log }}"
+          - name: LIFE360_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "brian-node-rust.fullname" . }}
+                key: LIFE360_PASSWORD
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - name: config-volume
+            mountPath: /etc/brian-node-rust
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
