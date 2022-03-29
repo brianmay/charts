@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  brian-node-rust:
+  - apiVersion: v2
+    appVersion: main
+    created: "2022-03-29T06:37:56.753070824Z"
+    description: Control IOT devices
+    digest: c1e1db4c109d74ba678fff0d56e550aa195a2a068c88858647b4d8e0f338d211
+    name: brian-node-rust
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/brian-node-rust-0.0.0/brian-node-rust-0.0.0.tgz
+    version: 0.0.0
   brian-resume:
   - apiVersion: v2
     appVersion: main
@@ -2124,4 +2135,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-03-27T07:11:44.011969195Z"
+generated: "2022-03-29T06:37:56.753745027Z"
