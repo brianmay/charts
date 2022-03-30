@@ -77,6 +77,13 @@ spec:
               value: "{{ .Values.teslamate.mqtt.tls }}"
             - name: MQTT_IPV6
               value: "{{ .Values.teslamate.mqtt.ipv6 }}"
+            - name: TESLAMATE_DEFAULT_GEOFENCE
+              value: "{{ .Values.teslamate.default_geofence }}"
+            - name: ENCRYPTION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "teslamate.fullname" . }}
+                  key: encryption_key
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

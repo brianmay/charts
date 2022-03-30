@@ -80,15 +80,17 @@ tolerations: []
 affinity: {}
 
 teslamate:
-  database:
-    username: ""
-    password: ""
-    name: ""
-    host: ""
+  da tabase:
+    username: ~
+    password: ~
+    name: ~
+    host: ~
   mqtt:
-    username: ""
-    password: ""
-    host: ""
-    port: ""
+    username: ~
+    password: ~
+    host: ~
+    port: ~
     tls: "false"
     ipv6: "false"
+  encryption_key: ~
+  default_geofence: ~
