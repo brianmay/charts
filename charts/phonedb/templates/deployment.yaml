@@ -41,11 +41,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /health
               port: 4000
           startupProbe:
             httpGet:
-              path: /
+              path: /health
               port: 4000
             failureThreshold: 120
           env:
