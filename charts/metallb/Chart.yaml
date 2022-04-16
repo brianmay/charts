@@ -3,10 +3,10 @@ name: metallb
 description: metallb deployment
 
 type: application
-version: 2.6.8
+version: 2.6.12
 appVersion: 0.12.1
 
 dependencies:
   - name: metallb
-    version: 2.6.8
+    version: 2.6.12
     repository: https://charts.bitnami.com/bitnami
