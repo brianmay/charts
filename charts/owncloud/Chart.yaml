@@ -3,10 +3,10 @@ name: owncloud
 description: owncloud deployment
 
 type: application
-version: 10.2.30
-appVersion: 10.8.0
+version: 11.0.24
+appVersion: 10.9.1
 
 dependencies:
   - name: owncloud
-    version: 10.2.30
+    version: 11.0.24
     repository: https://charts.bitnami.com/bitnami
