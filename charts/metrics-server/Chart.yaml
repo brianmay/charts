@@ -3,10 +3,10 @@ name: metrics-server
 description: metrics-server deployment
 
 type: application
-version: 5.11.3
+version: 5.11.7
 appVersion: 0.6.1
 
 dependencies:
   - name: metrics-server
-    version: 5.11.3
+    version: 5.11.7
     repository: https://charts.bitnami.com/bitnami
