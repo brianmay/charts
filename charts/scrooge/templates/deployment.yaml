@@ -114,6 +114,16 @@ spec:
                 key: OIDC_CLIENT_SECRET
           - name: OIDC_AUTH_SCOPE
             value: "{{ .Values.oidc.auth_scope }}"
+          - name: AMBER_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "scrooge.fullname" . }}
+                key: AMBER_TOKEN
+          - name: AMBER_SITE_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "scrooge.fullname" . }}
+                key: AMBER_SITE_ID
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:

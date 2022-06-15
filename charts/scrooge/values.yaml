@@ -106,3 +106,7 @@ oidc:
   client_id: ~
   client_secret: ~
   auth_scope: "openid profile groups"
+
+amber:
+  token: ~
+  site-id: ~
