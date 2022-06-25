@@ -79,6 +79,8 @@ spec:
               value: "{{ .Values.teslamate.mqtt.ipv6 }}"
             - name: TESLAMATE_DEFAULT_GEOFENCE
               value: "{{ .Values.teslamate.default_geofence }}"
+            - name: DEFAULT_GEOFENCE
+              value: "{{ .Values.teslamate.default_geofence }}"
             - name: ENCRYPTION_KEY
               valueFrom:
                 secretKeyRef:
