@@ -1764,6 +1764,16 @@ entries:
   scrooge:
   - apiVersion: v2
     appVersion: main
+    created: "2022-06-25T23:23:30.474501014Z"
+    description: Scrooge database
+    digest: 7e7d19e0f3812e93e994e5edc7d0fe9b70ac92afc2f684959c65b47d45bc647e
+    name: scrooge
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/scrooge-0.0.20/scrooge-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
+    appVersion: main
     created: "2022-03-27T07:11:44.011500497Z"
     description: Scrooge database
     digest: d172ed45e714ce689f71cf695ca0f8141a807b5ff2c7ce07f01b2c1634183478
@@ -2036,6 +2046,16 @@ entries:
   teslamate:
   - apiVersion: v2
     appVersion: 1.26.1
+    created: "2022-06-25T23:23:30.588956153Z"
+    description: Teslamate helm chart
+    digest: 40203cbb9b93cdb378f7f4117cba7358190ac2d12c3144819b009e0a32f04be1
+    name: teslamate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-0.0.15/teslamate-0.0.15.tgz
+    version: 0.0.15
+  - apiVersion: v2
+    appVersion: 1.26.1
     created: "2022-03-30T20:54:25.110910065Z"
     description: Teslamate helm chart
     digest: 6039326ab60fcd0ef4f10f4259eca3728d534c1ca4b238cc05ec8729ee12cb38
@@ -2305,4 +2325,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-06-11T11:02:37.024764809Z"
+generated: "2022-06-25T23:23:30.589609863Z"
