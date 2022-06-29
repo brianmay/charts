@@ -862,6 +862,20 @@ entries:
   mqtt:
   - apiVersion: v2
     appVersion: 2.0.11
+    created: "2022-06-29T22:47:06.325286876Z"
+    dependencies:
+    - name: mosquitto
+      repository: https://k8s-at-home.com/charts/
+      version: 4.4.0
+    description: mqtt Daemon
+    digest: dbc706f80d1a707b44e011e9b3b75eae2254192b5d3d40d94f82f39e2cc51b56
+    name: mqtt
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/mqtt-4.4.0/mqtt-4.4.0.tgz
+    version: 4.4.0
+  - apiVersion: v2
+    appVersion: 2.0.11
     created: "2022-03-11T01:25:53.02364869Z"
     dependencies:
     - name: mosquitto
@@ -945,6 +959,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/mqtt-2.3.0/mqtt-2.3.0.tgz
     version: 2.3.0
   node-red:
+  - apiVersion: v2
+    appVersion: 2.1.4
+    created: "2022-06-29T22:47:06.596895518Z"
+    dependencies:
+    - name: node-red
+      repository: https://k8s-at-home.com/charts/
+      version: 10.1.2
+    description: node-red deployment
+    digest: 0ed317e173591f521dbcdfc1dea84c74b95215e3caff9f3dd1224cd1099b558f
+    name: node-red
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/node-red-10.1.2/node-red-10.1.2.tgz
+    version: 10.1.2
   - apiVersion: v2
     appVersion: 2.1.4
     created: "2022-03-11T02:04:56.18657514Z"
@@ -2353,4 +2381,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-06-29T22:18:47.367135402Z"
+generated: "2022-06-29T22:47:06.597503852Z"
