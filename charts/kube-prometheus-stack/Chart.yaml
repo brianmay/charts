@@ -3,10 +3,10 @@ name: kube-prometheus-stack
 description: kube-prometheus-stack deployment
 
 type: application
-version: 36.0.0
+version: 36.2.0
 appVersion: 0.57.0
 
 dependencies:
   - name: kube-prometheus-stack
-    version: 36.0.0
+    version: 36.2.0
     repository: https://prometheus-community.github.io/helm-charts
