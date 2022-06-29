@@ -650,6 +650,20 @@ entries:
   metallb:
   - apiVersion: v2
     appVersion: 0.12.1
+    created: "2022-06-29T22:52:52.221459027Z"
+    dependencies:
+    - name: metallb
+      repository: https://charts.bitnami.com/bitnami
+      version: 3.0.9
+    description: metallb deployment
+    digest: b9d440d083de283ea62f1b8a3b83105c6d3cc3f356142d52aae443874f0e4d0b
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metallb-3.0.9/metallb-3.0.9.tgz
+    version: 3.0.9
+  - apiVersion: v2
+    appVersion: 0.12.1
     created: "2022-04-16T02:57:55.334741893Z"
     dependencies:
     - name: metallb
@@ -2381,4 +2395,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-06-29T22:47:06.597503852Z"
+generated: "2022-06-29T22:52:52.222439434Z"
