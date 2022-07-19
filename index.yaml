@@ -2115,6 +2115,16 @@ entries:
     version: 0.0.0
   teslamate:
   - apiVersion: v2
+    appVersion: 1.27.0
+    created: "2022-07-19T01:13:38.186331156Z"
+    description: Teslamate helm chart
+    digest: 156efc1e72bbc1f023d418be41bc052dd8934912824022826341ae8609f1b0b9
+    name: teslamate
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-0.0.16/teslamate-0.0.16.tgz
+    version: 0.0.16
+  - apiVersion: v2
     appVersion: 1.26.1
     created: "2022-06-25T23:23:30.588956153Z"
     description: Teslamate helm chart
@@ -2276,6 +2286,16 @@ entries:
     version: 0.0.0
   teslamate-grafana:
   - apiVersion: v2
+    appVersion: 1.27.0
+    created: "2022-07-19T01:13:38.299525845Z"
+    description: Teslamate grafana helm chart
+    digest: 9302ff08af717ec181f705e7e693370a7867009e6081c5e0e84febaf75918bc1
+    name: teslamate-grafana
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.12/teslamate-grafana-0.0.12.tgz
+    version: 0.0.12
+  - apiVersion: v2
     appVersion: 1.26.1
     created: "2022-03-11T01:25:53.378516447Z"
     description: Teslamate grafana helm chart
@@ -2395,4 +2415,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-06-29T22:52:52.222439434Z"
+generated: "2022-07-19T01:13:38.30013685Z"
