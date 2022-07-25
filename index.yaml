@@ -288,6 +288,21 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/dex-4.0.4/dex-4.0.4.tgz
     version: 4.0.4
+  home-assistant:
+  - apiVersion: v2
+    appVersion: 2.0.11
+    created: "2022-07-25T03:04:13.245296914Z"
+    dependencies:
+    - name: home-assistant
+      repository: https://k8s-at-home.com/charts/
+      version: 13.3.0
+    description: home-assistant
+    digest: 19defc71a5412c3b275ca5c512c96e768a4c1b7e48e9da37fd504f1ea03f6c24
+    name: home-assistant
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/home-assistant-13.3.0/home-assistant-13.3.0.tgz
+    version: 13.3.0
   ingress:
   - apiVersion: v2
     appVersion: 0.0.0
@@ -2415,4 +2430,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-07-19T01:13:38.30013685Z"
+generated: "2022-07-25T03:04:13.245838456Z"
