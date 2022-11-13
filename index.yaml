@@ -105,6 +105,20 @@ entries:
     version: 0.0.0
   cert-manager:
   - apiVersion: v2
+    appVersion: 1.10.0
+    created: "2022-11-13T21:19:12.750525988Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.10.0
+    description: cert-manager deployment
+    digest: 9c6fee424511dfad97a680d1b899f9917f85d01eb54360078cb7f6e33a0b88a0
+    name: cert-manager
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/cert-manager-1.10.0/cert-manager-1.10.0.tgz
+    version: 1.10.0
+  - apiVersion: v2
     appVersion: 1.8.2
     created: "2022-06-29T22:14:03.155003439Z"
     dependencies:
@@ -310,6 +324,20 @@ entries:
     version: 4.0.4
   home-assistant:
   - apiVersion: v2
+    appVersion: 2022.5.4
+    created: "2022-11-13T21:19:12.907635379Z"
+    dependencies:
+    - name: home-assistant
+      repository: https://k8s-at-home.com/charts/
+      version: 13.4.2
+    description: home-assistant
+    digest: c1d726aa5764dcae99ab814ad987cc6f496c61fe2850b593b18cae7a9b4251af
+    name: home-assistant
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/home-assistant-13.4.2/home-assistant-13.4.2.tgz
+    version: 13.4.2
+  - apiVersion: v2
     appVersion: 2.0.11
     created: "2022-07-25T03:04:13.245296914Z"
     dependencies:
@@ -345,6 +373,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/ingress-0.0.0/ingress-0.0.0.tgz
     version: 0.0.0
   ingress-nginx:
+  - apiVersion: v2
+    appVersion: 1.5.1
+    created: "2022-11-13T21:19:13.034172347Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.4.0
+    description: ingress-nginx deployment
+    digest: c8a781a062eb26f1b8d2d4e8ce8c2d98139faf6755c9aca13f191caf9b1404f6
+    name: ingress-nginx
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/ingress-nginx-4.4.0/ingress-nginx-4.4.0.tgz
+    version: 4.4.0
   - apiVersion: v2
     appVersion: 1.2.1
     created: "2022-06-11T01:05:03.286049165Z"
@@ -530,6 +572,20 @@ entries:
     version: 0.9.8-brian.1
   kube-prometheus-stack:
   - apiVersion: v2
+    appVersion: 0.60.1
+    created: "2022-11-13T21:19:13.212148096Z"
+    dependencies:
+    - name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 41.7.4
+    description: kube-prometheus-stack deployment
+    digest: c6b4d73f019d09b15cafdcfd51d46970f3d6ac34f33b99d87c57269edf88907e
+    name: kube-prometheus-stack
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/kube-prometheus-stack-41.7.4/kube-prometheus-stack-41.7.4.tgz
+    version: 41.7.4
+  - apiVersion: v2
     appVersion: 0.57.0
     created: "2022-06-29T22:18:47.366641262Z"
     dependencies:
@@ -685,6 +741,20 @@ entries:
   metallb:
   - apiVersion: v2
     appVersion: 0.12.1
+    created: "2022-11-13T21:19:13.3350102Z"
+    dependencies:
+    - name: metallb
+      repository: https://charts.bitnami.com/bitnami
+      version: 4.1.11
+    description: metallb deployment
+    digest: 4594c583787653a3ba710af08d88a3eadfcfc73b13e53c8c07cb864c95c10e8a
+    name: metallb
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metallb-4.1.11/metallb-4.1.11.tgz
+    version: 4.1.11
+  - apiVersion: v2
+    appVersion: 0.12.1
     created: "2022-06-29T22:52:52.221459027Z"
     dependencies:
     - name: metallb
@@ -812,6 +882,20 @@ entries:
   metrics-server:
   - apiVersion: v2
     appVersion: 0.6.1
+    created: "2022-11-13T21:19:13.46108426Z"
+    dependencies:
+    - name: metrics-server
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.2.3
+    description: metrics-server deployment
+    digest: 35557fe0db2db9f45d87b6339e2ab5cec371572c0aafcebc010e63aea137f2aa
+    name: metrics-server
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/metrics-server-6.2.3/metrics-server-6.2.3.tgz
+    version: 6.2.3
+  - apiVersion: v2
+    appVersion: 0.6.1
     created: "2022-06-11T06:24:42.710835138Z"
     dependencies:
     - name: metrics-server
@@ -909,6 +993,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/metrics-server-5.8.11/metrics-server-5.8.11.tgz
     version: 5.8.11
   mqtt:
+  - apiVersion: v2
+    appVersion: 2.0.14
+    created: "2022-11-13T21:19:13.596655482Z"
+    dependencies:
+    - name: mosquitto
+      repository: https://k8s-at-home.com/charts/
+      version: 4.8.2
+    description: mqtt Daemon
+    digest: 276a525b45af40719e5d1b0e04db6833aa030ec01ebc76ac5fb59071b78a45b0
+    name: mqtt
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/mqtt-4.8.2/mqtt-4.8.2.tgz
+    version: 4.8.2
   - apiVersion: v2
     appVersion: 2.0.11
     created: "2022-06-29T22:47:06.325286876Z"
@@ -1008,6 +1106,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/mqtt-2.3.0/mqtt-2.3.0.tgz
     version: 2.3.0
   node-red:
+  - apiVersion: v2
+    appVersion: 2.1.4
+    created: "2022-11-13T21:19:13.747810871Z"
+    dependencies:
+    - name: node-red
+      repository: https://k8s-at-home.com/charts/
+      version: 10.3.2
+    description: node-red deployment
+    digest: 85a2c893206433c0ba8132f2ed91709d963308e328ce9a8ee459ddbf10d33f76
+    name: node-red
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/node-red-10.3.2/node-red-10.3.2.tgz
+    version: 10.3.2
   - apiVersion: v2
     appVersion: 2.1.4
     created: "2022-06-29T22:47:06.596895518Z"
@@ -1182,6 +1294,20 @@ entries:
     - https://github.com/brianmay/charts/releases/download/oidc-proxy-0.0.0/oidc-proxy-0.0.0.tgz
     version: 0.0.0
   owncloud:
+  - apiVersion: v2
+    appVersion: 10.11.0
+    created: "2022-11-13T21:19:13.894601586Z"
+    dependencies:
+    - name: owncloud
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.6
+    description: owncloud deployment
+    digest: f028143eef42d7b195843d459bb9e27bf810516db206b56cbdb528c53f7cc1ad
+    name: owncloud
+    type: application
+    urls:
+    - https://github.com/brianmay/charts/releases/download/owncloud-12.2.6/owncloud-12.2.6.tgz
+    version: 12.2.6
   - apiVersion: v2
     appVersion: 10.10.0
     created: "2022-06-11T11:02:37.023897307Z"
@@ -2470,4 +2596,4 @@ entries:
     urls:
     - https://github.com/brianmay/charts/releases/download/teslamate-grafana-0.0.0/teslamate-grafana-0.0.0.tgz
     version: 0.0.0
-generated: "2022-10-19T03:33:54.127269362Z"
+generated: "2022-11-13T21:19:13.895048194Z"
