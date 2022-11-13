@@ -3,10 +3,10 @@ name: owncloud
 description: owncloud deployment
 
 type: application
-version: 12.1.9
-appVersion: 10.10.0
+version: 12.2.6
+appVersion: 10.11.0
 
 dependencies:
   - name: owncloud
-    version: 12.1.9
+    version: 12.2.6
     repository: https://charts.bitnami.com/bitnami

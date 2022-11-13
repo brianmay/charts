@@ -3,10 +3,10 @@ name: home-assistant
 description: home-assistant
 
 type: application
-version: 13.3.0
-appVersion: 2.0.11
+version: 13.4.2
+appVersion: 2022.5.4
 
 dependencies:
   - name: home-assistant
-    version: 13.3.0
+    version: 13.4.2
     repository: https://k8s-at-home.com/charts/
